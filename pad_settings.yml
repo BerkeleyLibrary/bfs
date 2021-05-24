@@ -1,0 +1,103 @@
+pad_settings:
+  send_code:
+    pad: 2
+    separator: " "
+    adjust: "ljust"
+  vendor_id:
+    pad: 10 
+    separator: " "
+    adjust: "ljust"
+  invoice_number:
+    pad: 12 
+    separator: " "
+    adjust: "ljust"
+  gross_amount:
+    pad: 10 
+    separator: "0"
+    adjust: "rjust"
+  item_total_price:
+    pad: 10 
+    separator: "0"
+    adjust: "rjust"
+  sum:
+    pad: 10 
+    separator: "0"
+    adjust: "rjust"
+  sales_tax:
+    pad: 12 
+    separator: " "
+    adjust: "ljust"
+  invoice_date:
+    pad: 6 
+    separator: " "
+    adjust: "ljust"
+  creation_date:
+    pad: 6 
+    separator: " "
+    adjust: "ljust"
+  overhead:
+    pad: 12 
+    separator: " "
+    adjust: "ljust"
+  ship_amount:
+    pad: 12
+    separator: " "
+    adjust: "ljust"
+  vendor_FinancialSys_Code:
+    pad: 10 
+    separator: "0"
+    adjust: "rjust"
+  remit_address_sequence:
+    pad: 8 
+    separator: " "
+    adjust: "ljust"
+  line_number:
+    pad: 3 
+    separator: "0"
+    adjust: "rjust"
+  dist_sequence:
+    pad: 3 
+    separator: "0"
+    adjust: "rjust"
+  dist_amount_sign:
+    pad: 1 
+    separator: " "
+    adjust: "ljust"
+  reference_voucher:
+    pad: 10 
+    separator: " "
+    adjust: "ljust"
+  grand_total:
+    pad: 14 
+    separator: "0"
+    adjust: "rjust"
+  invoice_count:
+    pad: 6 
+    separator: "0"
+    adjust: "rjust"
+  item_count:
+    pad: 6 
+    separator: "0"
+    adjust: "rjust"
+  external_id:   #don't need to pad this. going to parse field and pad indvidual elements
+    pad:  
+  business_unit:
+    pad: 1 
+    separator: " "
+    adjust: "ljust"
+  account:
+    pad: 5 
+    separator: " "
+    adjust: "rjust"
+  fund:
+    pad: 5 
+    separator: " "
+    adjust: "rjust"
+  org:
+    pad: 5 
+    separator: " "
+    adjust: "rjust"
+  program:
+    pad: 2 
+    separator: " "
+    adjust: "rjust"
