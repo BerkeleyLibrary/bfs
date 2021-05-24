@@ -5,9 +5,11 @@ require_relative 'padding'
 #file = "./invoice_multiple_items.xml"
 #file = "./invoice.xml"
 file = "./invoices_complicated.xml"
+file = ARGV[0]
+
+
 doc = Nokogiri::XML(File.open(file),Encoding::UTF_8.to_s)
 doc.remove_namespaces!
-
 
 #format date. It needs to be yymmdd
 def process_date(invoice_date)

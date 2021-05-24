@@ -1,7 +1,7 @@
 module Padding
 require 'yaml'
 
-pad_file = "pad_settings.yml"
+pad_file = File.join(File.dirname(__FILE__), './pad_settings.yml')
 
 #pads the designated field with spaces or 0's left or right justified
 #field_name is the name of the BFS field
@@ -9,6 +9,7 @@ pad_file = "pad_settings.yml"
 #pad_type is either a space or a 0
 #adjust is either left adjusted or right adjusted so (ljust or rjust)
 #def self.get_pad(field_name,str,pad_type,adjust)
+
 def self.get_pad(field_name,str)
 
   pad = @pad_settings['pad_settings'][field_name]['pad']
@@ -28,6 +29,5 @@ end
 
 
 @pad_settings = YAML.load_file(pad_file)
-
 
 end
