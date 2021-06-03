@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_data xmlns="http://com/exlibris/repository/acq/invoice/xmlbeans">
+  <invoice_list>
+    <invoice>
+      <invoice_number>Y0000210</invoice_number>
+      <invoice_owner>Doe Library</invoice_owner>
+      <approved_by>Hemhauser Mark</approved_by>
+      <invoice_amount>
+        <currency>USD</currency>
+        <sum>265.74</sum>
+      </invoice_amount>
+      <vendor_code>gobi</vendor_code>
+      <vendor_name>GOBI</vendor_name>
+      <vendor_FinancialSys_Code>0000003046</vendor_FinancialSys_Code>
+      <vendor_liable_for_vat>true</vendor_liable_for_vat>
+      <vendor_payment_address_list>
+        <payment_address preferred="true">
+          <line1>GOBI</line1>
+          <line2>999 Maple St</line2>
+          <line3>Contoocook, NH 03229-7991</line3>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+        <payment_address preferred="false">
+          <line1>Remit A</line1>
+          <line2>PO Box 277991</line2>
+          <line3>Atlanta, GA 30384-7991</line3>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+      </vendor_payment_address_list>
+      <unique_identifier>3485874780006532</unique_identifier>
+      <invoice_date>05/14/2021</invoice_date>
+      <payment_method>AccountingDepartment</payment_method>
+      <prepaid_ind>false</prepaid_ind>
+      <number_of_attachments>1</number_of_attachments>
+      <invoice_ownered_entity>
+        <createdBy>10153575</createdBy>
+        <creationDate>20210517</creationDate>
+        <customerId>6530</customerId>
+        <institutionId>6532</institutionId>
+        <modifiedBy>10153575</modifiedBy>
+      </invoice_ownered_entity>
+      <vat_info>
+        <expended_from_fund_ind>true</expended_from_fund_ind>
+        <inclusive_ind>false</inclusive_ind>
+        <vat_amount>24.58</vat_amount>
+        <vat_percentage>9.25</vat_percentage>
+        <vat_type>EXCLUSIVE</vat_type>
+        <vat_in_invoice_line_level>true</vat_in_invoice_line_level>
+      </vat_info>
+      <additional_charges>
+        <discount_amount>0.0</discount_amount>
+        <insurance_amount>0.0</insurance_amount>
+        <overhead_amount>0.0</overhead_amount>
+        <shipment_amount>0.0</shipment_amount>
+        <total_charges_amount>0.0</total_charges_amount>
+      </additional_charges>
+      <invoice_line_list>
+        <invoice_line>
+          <line_number>1</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit Price  :93.75</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <tertiary_reporting_code>FORM3:t</tertiary_reporting_code>
+          <vat_amount>8.67</vat_amount>
+          <vat_percentage>9.25</vat_percentage>
+          <total_price>102.42</total_price>
+          <price>93.75</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991068868499706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0745342086</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>London :</acqterms_place>
+              <creator>Harvey, David, author.</creator>
+              <date>2020</date>
+              <publisher>Pluto Press,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: 99985852209</vendor_reference_number>
+            <additional_order_reference>OLD ORD #:</additional_order_reference>
+            <po_line_number>o20173052</po_line_number>
+            <po_line_price>93.75</po_line_price>
+            <po_line_title>The anti-capitalist chronicles / David Harvey ; edited by Jordan T. Camp and Chris Caruso.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>102.42</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>102.42</sum>
+              </local_amount>
+              <code>ecnmm</code>
+              <name>ECNM-CHURCH</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>2</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit Price  :72</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <tertiary_reporting_code>FORM3:t</tertiary_reporting_code>
+          <vat_amount>6.66</vat_amount>
+          <vat_percentage>9.25</vat_percentage>
+          <total_price>78.66</total_price>
+          <price>72.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991068868379706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>9789813274549</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>New Jersey :</acqterms_place>
+              <creator>Jongen, Wijnand, author.</creator>
+              <date>2018</date>
+              <publisher>World Scientific Publishing Co. Pte. Ltd.,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: 99985852203</vendor_reference_number>
+            <additional_order_reference>OLD ORD #:</additional_order_reference>
+            <po_line_number>o20172990</po_line_number>
+            <po_line_price>72.0</po_line_price>
+            <po_line_title>The end of online shopping : the future of new retail in an always connected world / Wijnand Jongen, Chairman of Ecommerce Europe, and CEO of Thuiswinkel.org.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>78.66</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>78.66</sum>
+              </local_amount>
+              <code>ecnmm</code>
+              <name>ECNM-CHURCH</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>3</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit Price  :99.99</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <tertiary_reporting_code>FORM3:t</tertiary_reporting_code>
+          <vat_amount>9.25</vat_amount>
+          <vat_percentage>9.25</vat_percentage>
+          <total_price>109.24</total_price>
+          <price>99.99</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991068868229706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>9781847012203</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>Woodbridge, Suffolk :</acqterms_place>
+              <creator>Philip, Kate (Writer on economic development projects), author.</creator>
+              <date>2018</date>
+              <publisher>James Currey,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: 99985852197</vendor_reference_number>
+            <additional_order_reference>OLD ORD #:</additional_order_reference>
+            <po_line_number>o2017293x</po_line_number>
+            <po_line_price>99.99</po_line_price>
+            <po_line_title>Markets on the margins : mineworkers, job creation &amp;amp; enterprise development / Kate Philip.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>109.24</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>109.24</sum>
+              </local_amount>
+              <code>ecnmm</code>
+              <name>ECNM-CHURCH</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+      </invoice_line_list>
+    </invoice>
+  </invoice_list>
+</payment_data>

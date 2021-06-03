@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_data xmlns="http://com/exlibris/repository/acq/invoice/xmlbeans">
+  <invoice_list>
+    <invoice>
+      <invoice_number>246739</invoice_number>
+      <invoice_owner>Doe Library</invoice_owner>
+      <approved_by>Hemhauser Mark</approved_by>
+      <invoice_amount>
+        <currency>USD</currency>
+        <sum>4943.21</sum>
+      </invoice_amount>
+      <vendor_code>harr</vendor_code>
+      <vendor_name>HARRASSOWITZ</vendor_name>
+      <vendor_additional_code>51839  Serials</vendor_additional_code>
+      <vendor_FinancialSys_Code>0000003090-2</vendor_FinancialSys_Code>
+      <vendor_liable_for_vat>true</vendor_liable_for_vat>
+      <vendor_payment_address_list>
+        <payment_address preferred="true">
+          <line1>HARRASSOWITZ</line1>
+          <line2>65174 WIESBADEN</line2>
+          <line3>GERMANY</line3>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+        <payment_address preferred="false">
+          <line1>HARRASSOWITZ</line1>
+          <line2>KREUZBERGER RING 7 B-D</line2>
+          <line3>65205 WIESBADEN</line3>
+          <line4>GERMANY</line4>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+      </vendor_payment_address_list>
+      <unique_identifier>3333091850006532</unique_identifier>
+      <invoice_date>02/08/2021</invoice_date>
+      <payment_method>ACCOUNTINGDEPARTMENT</payment_method>
+      <prepaid_ind>false</prepaid_ind>
+      <number_of_attachments>2</number_of_attachments>
+      <invoice_ownered_entity>
+        <createdBy>University of California Berkeley</createdBy>
+        <creationDate>20210426</creationDate>
+        <customerId>6530</customerId>
+        <institutionId>6532</institutionId>
+        <modifiedBy>10153575</modifiedBy>
+      </invoice_ownered_entity>
+      <vat_info>
+        <expended_from_fund_ind>true</expended_from_fund_ind>
+        <inclusive_ind>false</inclusive_ind>
+        <vat_amount>95.06</vat_amount>
+        <vat_percentage>1.92</vat_percentage>
+        <vat_type>EXCLUSIVE</vat_type>
+        <vat_in_invoice_line_level>true</vat_in_invoice_line_level>
+      </vat_info>
+      <additional_charges>
+        <discount_amount>0.0</discount_amount>
+        <insurance_amount>0.0</insurance_amount>
+        <overhead_amount>0.0</overhead_amount>
+        <shipment_amount>100.0</shipment_amount>
+        <total_charges_amount>100.0</total_charges_amount>
+      </additional_charges>
+      <invoice_line_list>
+        <invoice_line>
+          <line_number>1</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 146   
+ Title Of Journal Revolver Revue &lt;incl. Supplement: Kriticka Priloha> 
+ Supplier article number REV1599 
+ ISSN 0000-0000</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>155.5</total_price>
+          <price>152.35</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991082331069706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>1210-2881</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>[S.l. :</acqterms_place>
+              <date>5-</date>
+              <publisher>sn,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: To begin: Volume 60- (omitting vol 61)-</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96196066</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o190890x</additional_order_reference>
+            <po_line_number>o10454901</po_line_number>
+            <po_line_price>146.16</po_line_price>
+            <po_line_title>Revolver revue.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>155.5</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>155.5</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>2</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 127.43   
+ Title Of Journal Revue d?'Assyriologie et d?'Archeologie Orientale 
+ Supplier article number REV0239 
+ ISSN 0373-6032</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.115 ; End Volume or Issue: 31.Dec.2021 v.115</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>135.72</total_price>
+          <price>132.97</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991050992079706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0373-6032</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>[Paris]</acqterms_place>
+              <date>1.- 1884-</date>
+              <publisher>Presses universitaires de France</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96287664   TTL: REV0239</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1174241</additional_order_reference>
+            <po_line_number>o10199731</po_line_number>
+            <po_line_price>141.79</po_line_price>
+            <po_line_title>Revue d'assyriologie et d'archéologie orientale</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>135.72</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>135.72</sum>
+              </local_amount>
+              <code>islas</code>
+              <name>ISLA-HAMED</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>3</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 88   
+ Title Of Journal Rossiia XXI 
+ Supplier article number ROS1042 
+ ISSN 0869-8503</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>93.73</total_price>
+          <use_tax>0</use_tax>
+          <price>91.83</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991070331369706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0869-8503</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>1993, 1-</date>
+              <publisher>"Ėksperimentalʹnyĭ tvorcheskiĭ t︠s︡entr,"</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 1994:1- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96082293</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1970495</additional_order_reference>
+            <po_line_number>o1049523x</po_line_number>
+            <po_line_price>90.93</po_line_price>
+            <po_line_title>Rossii︠a︡ XXI.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>93.73</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>93.73</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>4</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 171   
+ Title Of Journal Rossiiskii Ekonomicheskii Zhurnal &lt;Formerly: Economicheskie Nauki> 
+ Supplier article number EKO0004 
+ ISSN 0869-5202</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>16.51</vat_amount>
+          <vat_percentage>9.07</vat_percentage>
+          <total_price>198.63</total_price>
+          <price>178.44</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991001565259706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>1992, 3-</date>
+              <publisher>Finansy i statistika,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96082168</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o193319x</additional_order_reference>
+            <po_line_number>o10467282</po_line_number>
+            <po_line_price>177.95</po_line_price>
+            <po_line_title>Rossiĭskiĭ ėkonomicheskiĭ zhurnal.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>132.42</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>132.42</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>66.21</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>66.21</sum>
+              </local_amount>
+              <code>chmme</code>
+              <name>LAAM-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-54772-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>5</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 251.7   
+ Title Of Journal Rote Fahne 
+ Supplier article number ROT0010 
+ ISSN 0936-1421</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.52 iss.1 ; End Volume or Issue: 31.Dec.2021 v.52 iss.26</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>24.30</vat_amount>
+          <vat_percentage>9.06</vat_percentage>
+          <total_price>292.37</total_price>
+          <price>262.65</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991051044189706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0936-1421</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Tübingen :</acqterms_place>
+              <creator>Rote Fahne (Tübingen, Germany : 1970)</creator>
+              <date>1. Jahrg., Nr. 1 (Juli 1970)-</date>
+              <publisher>Kommunistischer Arbeiterbund,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 1993- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 93008751</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1962449</additional_order_reference>
+            <po_line_number>o10489605</po_line_number>
+            <po_line_price>45.0</po_line_price>
+            <po_line_title>Rote Fahne : Magazin der MLPD.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>292.37</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>292.37</sum>
+              </local_amount>
+              <code>germs</code>
+              <name>GERM-OTT</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>6</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 230   
+ Title Of Journal Rus Derzhavnaia 
+ Supplier article number RUS1175 
+ ISSN 0000-0000</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>22.20</vat_amount>
+          <vat_percentage>9.06</vat_percentage>
+          <total_price>267.17</total_price>
+          <price>240.01</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991070156519706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>1993, no. 1-</date>
+              <publisher>Redakt︠s︡ii︠a︡,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with No. 1 (1993)- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96377226</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1969079</additional_order_reference>
+            <po_line_number>o10494297</po_line_number>
+            <po_line_price>241.19</po_line_price>
+            <po_line_title>Rusʹ derzhavnai︠a︡.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>166.99</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>166.99</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>100.18</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>100.18</sum>
+              </local_amount>
+              <code>chmme</code>
+              <name>LAAM-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-54772-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>7</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 332   
+ Title Of Journal Russkaia Literatura 
+ Supplier article number RUS0004 
+ ISSN 0131-6095</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>32.05</vat_amount>
+          <vat_percentage>9.06</vat_percentage>
+          <total_price>385.64</total_price>
+          <use_tax>0</use_tax> 
+          <price>346.44</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991051086479706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0131-6095</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Leningrad :</acqterms_place>
+              <creator>Russkai︠a︡ literatura (Saint Petersburg, Russia)</creator>
+              <date>1958-</date>
+              <publisher>Nauka, Leningradskoe otd-nie etc,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96404392</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1493991</additional_order_reference>
+            <po_line_number>o10330471</po_line_number>
+            <po_line_price>334.45</po_line_price>
+            <po_line_title>Russkai︠a︡ literatura.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>99.98</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>99.98</sum>
+              </local_amount>
+              <code>ealju</code>
+              <name>EALJ-MARRA</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-36333-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>285.66</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>285.66</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>8</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 202   
+ Title Of Journal Russkii Yazyk za Rubezhom = RussianAbroad 
+ Supplier article number RUS0007 
+ ISSN 0131-615X</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>215.14</total_price>
+          <price>210.79</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991051087979706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0036-0384</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>1967/1-</date>
+              <publisher>Moskovskiĭ universitet</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 1999:1- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96081443</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o209311x</additional_order_reference>
+            <po_line_number>o10352028</po_line_number>
+            <po_line_price>210.1</po_line_price>
+            <po_line_title>Russkiĭ i︠a︡zyk za rubezhom</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>215.14</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>215.14</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>9</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 84   
+ Title Of Journal Russkij Jazyk v Naucnom Osvescenii&lt;Russkii iazyk v nauchnom osveshche 
+ Supplier article number RUS1130 
+ ISSN 1681-1062</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>89.46</total_price>
+          <price>87.65</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991041179849706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>1681-1062</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>Began with No 1 (2001)</date>
+              <publisher>I︠A︡zyki slavi︠a︡nskoĭ kulʹtury,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with No. 1/2001- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96376922-0-0</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13874962</additional_order_reference>
+            <po_line_number>o10668767</po_line_number>
+            <po_line_price>93.69</po_line_price>
+            <po_line_title>Russkiĭ i︠a︡zyk v nauchnom osveshchenii / Rossiĭskai︠a︡ akademii︠a︡ nauk, Institut russkogo i︠a︡zyka im. V.V. Vinogradova</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>89.46</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>89.46</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>10</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 85   
+ Title Of Journal Sbornik Archivnich Praci 
+ Supplier article number SBO0002 
+ ISSN 0036-5246</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>90.53</total_price>
+          <price>88.7</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991034605429706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0036-5246</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Praha.</acqterms_place>
+              <date>roč. 1-   1951-</date>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 00864935</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1098652</additional_order_reference>
+            <po_line_number>o10091749</po_line_number>
+            <po_line_price>78.47</po_line_price>
+            <po_line_title>Sborník archivních prací.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>90.53</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>90.53</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>11</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 61.91   
+ Title Of Journal Selden Society &lt;with: Handbook / Publications / Annual Lectures> 
+ Supplier article number SEL1035 
+ ISSN 0000-0000</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.138 ; End Volume or Issue: 31.Dec.2021 v.138</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>74.73</total_price>
+          <price>73.22</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991047127949706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>London</acqterms_place>
+              <creator>Selden Society.</creator>
+              <date>hb</date>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #:</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: 1108640";".o1206229</additional_order_reference>
+            <po_line_number>o10126909</po_line_number>
+            <po_line_price>71.69</po_line_price>
+            <po_line_title>Membership / Selden Society</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>74.73</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>74.73</sum>
+              </local_amount>
+              <code>hists</code>
+              <name>HIST-DORNER</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <fund_type>General</fund_type>
+              <fund_type_desc>General</fund_type_desc>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>12</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 54.64   
+ Title Of Journal Sinai &lt;Sinay> 
+ Supplier article number SIN0004 
+ ISSN 0334-4304</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2019 v.153 iss.1 ; End Volume or Issue: 31.Dec.2019 v.153 iss.2</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>58.2</total_price>
+          <price>57.02</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991050752639706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0334-4304</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Yerushalayim,</acqterms_place>
+              <creator>Sinai (Jerusalem)</creator>
+              <date>kerekh 1- (ḥov 1- ); Siṿan 697 [1937]-</date>
+              <publisher>Mosad ha-Rav Ḳuḳ</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96407770-0-0</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1052305</additional_order_reference>
+            <po_line_number>o10020536</po_line_number>
+            <po_line_price>54.46</po_line_price>
+            <po_line_title>Sinai.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>58.2</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>58.2</sum>
+              </local_amount>
+              <code>judas</code>
+              <name>JUDA-HABER</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>13</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 114   
+ Title Of Journal Solovetskoe More 
+ Supplier article number SOL1090 
+ ISSN 1810-7818</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>121.42</total_price>
+          <price>118.96</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991025808099706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>1810-7818</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Arkhangelʹsk :</acqterms_place>
+              <date>1 (2002)-</date>
+              <publisher>TSM,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with No. 4- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96377276</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1492450x</additional_order_reference>
+            <po_line_number>o12062224</po_line_number>
+            <po_line_price>133.51</po_line_price>
+            <po_line_title>Solovet︠s︡koe more.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>121.42</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>121.42</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>14</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 209   
+ Title Of Journal Sotsiologiia Vlasti 
+ Supplier article number SOT1016 
+ ISSN 2074-0492</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>222.59</total_price>
+          <price>218.09</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991005377279706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>2074-0492</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>199u</date>
+              <publisher>Izd-vo RAGS,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 2000:1- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96377248</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o2130270</additional_order_reference>
+            <po_line_number>o10630922</po_line_number>
+            <po_line_price>219.76</po_line_price>
+            <po_line_title>Sot︠s︡iologii︠a︡ vlasti / Rossiĭskai︠a︡ akademii︠a︡ gosudarstvennoĭ sluzhby pri Prezidente Rossiĭskoĭ Federat︠s︡ii, Informat︠s︡ionno-sot︠s︡iologicheskiĭ t︠s︡entr.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>222.59</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>222.59</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>15</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 41.27   
+ Title Of Journal Southern History 
+ Supplier article number SOU1175 
+ ISSN 0142-4688</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.43 ; End Volume or Issue: 31.Dec.2021 v.43</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>43.96</total_price>
+          <price>43.07</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991034897709706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0142-4688</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>[Folkestone, Kent, etc.]</acqterms_place>
+              <date>v. 1-   1979-</date>
+              <publisher>Dawson etc</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR (SNA): 96308865</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1206758</additional_order_reference>
+            <po_line_number>o10132077</po_line_number>
+            <po_line_price>44.73</po_line_price>
+            <po_line_title>Southern history.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>43.96</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>43.96</sum>
+              </local_amount>
+              <code>hists</code>
+              <name>HIST-DORNER</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <fund_type>General</fund_type>
+              <fund_type_desc>General</fund_type_desc>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>16</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 292   
+ Title Of Journal Statystyka Ukrainy = Statistics ofUkraine 
+ Supplier article number STA1637 
+ ISSN 0000-0000</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>310.99</total_price>
+          <price>304.7</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991019070689706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>2519-1853</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Kyïv :</acqterms_place>
+              <creator>Statystyka Ukraïny (Kiev, Ukraine)</creator>
+              <date>Began in 1998.</date>
+              <publisher>Derz︠h︡ kom-t statystyky Ukraïny</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 2002:1- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96377260</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o11359080</additional_order_reference>
+            <po_line_number>o1068573x</po_line_number>
+            <po_line_price>307.66</po_line_price>
+            <po_line_title>Statystyka Ukraïny.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>310.99</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>310.99</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>17</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 183.01   
+ Title Of Journal TASPO GartenDesign &lt;formerly: gruenFORUM.LA> &lt;incl. Supplement : Gala 
+ Supplier article number LAN0021 
+ ISSN 1610-4730</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.51 iss.1 ; End Volume or Issue: 31.Dec.2021 v.51 iss.6</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>194.91</total_price>
+          <price>190.97</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991079991809706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>1862-1511</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Braunschweig :</acqterms_place>
+              <date>Ausg. 1 (Jan./Feb. 2006)-</date>
+              <publisher>Thalacker Medien,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: begin with 1974</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 00691208</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1090616</additional_order_reference>
+            <po_line_number>o11432068</po_line_number>
+            <po_line_price>178.55</po_line_price>
+            <po_line_title>Taspo GartenDesign.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>194.91</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>194.91</sum>
+              </local_amount>
+              <code>risid</code>
+              <name>AULD-NEWYEARRAMIREZ</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-49708-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>18</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 124.76   
+ Title Of Journal Theater der Zeit &lt;incl. Arbeitsbuch/ double / IXYPSILONZEIT / Theater 
+ Supplier article number THE1162 
+ ISSN 0000-0000</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>132.88</total_price>
+          <price>130.19</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991050758099706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0040-5418</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Berlin :</acqterms_place>
+              <date>1. Jahrg., Heft 1 (Juli 1946)-</date>
+              <publisher>Henschel,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 00293946</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1105875</additional_order_reference>
+            <po_line_number>o1009412x</po_line_number>
+            <po_line_price>123.39</po_line_price>
+            <po_line_title>Theater der Zeit.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>132.88</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>132.88</sum>
+              </local_amount>
+              <code>germs</code>
+              <name>GERM-OTT</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>19</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 299   
+ Title Of Journal Ural 
+ Supplier article number URA1010 
+ ISSN 0130-5409</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>318.45</total_price>
+          <price>312.01</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991034675759706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0130-5409</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Ekaterinburg :</acqterms_place>
+              <date>1957-</date>
+              <publisher>Ural ,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: To Begin: 2014-</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96415170</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1372099</additional_order_reference>
+            <po_line_number>o10301975</po_line_number>
+            <po_line_price>320.52</po_line_price>
+            <po_line_title>Ural.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>318.45</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>318.45</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>20</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 351   
+ Title Of Journal Visnyk Natsional?'noi Akademii Derzhavnoho Upravlinnia Pry Prezydentov 
+ Supplier article number VIS1042 
+ ISSN 2310-2837</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>373.83</total_price>
+          <price>366.27</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991053456189706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>Kyïv :</acqterms_place>
+              <date>Began with 2015/4 = 79.</date>
+              <publisher>Upravlinni︠a︡ z Vydavnychoï Dii︠a︡lʹnosti Nat︠s︡ionalʹnoï akademiï derz︠h︡avnoho upravlinni︠a︡ pry Prezydentovi Ukraïny,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with Vyp. 1(1999)- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96377241</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o2109505</additional_order_reference>
+            <po_line_number>o10609131</po_line_number>
+            <po_line_price>349.46</po_line_price>
+            <po_line_title>Visnyk Nat︠s︡ionalʹnoï akademiï derz︠h︡avnoho upravlinni︠a︡ pry Prezydentovi Ukraïny. Serii︠a︡ &amp;quot;Derz︠h︡avne upravlinni︠a︡&amp;quot;.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>373.83</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>373.83</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>21</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 575.48   
+ Title Of Journal Zeitschrift fuer Papyrologie und Epigraphik 
+ Supplier article number ZEI0165 
+ ISSN 0084-5388</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 v.217 ; End Volume or Issue: 31.Dec.2021 v.220</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>612.91</total_price>
+          <price>600.51</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991050765319706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0084-5388</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Bonn :</acqterms_place>
+              <date>Began with Band 1 (1967)</date>
+              <publisher>Rudolf  Habelt Verlag GMBH,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 00349267</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1110020</additional_order_reference>
+            <po_line_number>o10094696</po_line_number>
+            <po_line_price>563.17</po_line_price>
+            <po_line_title>Zeitschrift für Papyrologie und Epigraphik</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>612.91</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>612.91</sum>
+              </local_amount>
+              <code>class</code>
+              <name>CLAS-OTT</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>22</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 330   
+ Title Of Journal Zeleznodoroznyj Transport 
+ Supplier article number ZEL1000 
+ ISSN 0044-4448</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>351.47</total_price>
+          <price>344.36</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991034681629706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0044-4448</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>Began in 1941.</date>
+              <publisher>Transzheldorizdat,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY:</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96082173</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1372361</additional_order_reference>
+            <po_line_number>o10302074</po_line_number>
+            <po_line_price>343.03</po_line_price>
+            <po_line_title>Zheleznodorozhnyĭ transport.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>351.47</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>351.47</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>23</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 111   
+ Title Of Journal Zhenshchina v Rossiiskom Obshchestve 
+ Supplier article number ZHE1002 
+ ISSN 1992-2892</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>129.77</total_price>
+          <price>127.14</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991032277549706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>1992-2892</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Ivanovo :</acqterms_place>
+              <date>1996, 1-</date>
+              <publisher>Universitet,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 2002:2-3(26-27)- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96393409-0-0</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13344584</additional_order_reference>
+            <po_line_number>o10863825</po_line_number>
+            <po_line_price>113.13</po_line_price>
+            <po_line_title>Zhenshchina v rossiĭskom obshchestve / Gosudarstvennyĭ komitet Rossiĭskoĭ Federat︠s︡ii po vysshemu obrazovanii︠u︡, Ivanovskiĭ gosudarstvennyĭ universitet.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>129.77</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>129.77</sum>
+              </local_amount>
+              <code>slavc</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>24</line_number>
+          <line_type>REGULAR</line_type>
+          <note>Unit price : 158   
+ Title Of Journal Zhurnal Moskowskoi Patriarkhi 
+ Supplier article number ZHU0018 
+ ISSN 0132-862X</note>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>Start Volume or Issue: 01.Jan.2021 ; End Volume or Issue: 31.Dec.2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <vat_amount>0.00</vat_amount>
+          <vat_percentage>0.0</vat_percentage>
+          <total_price>168.27</total_price>
+          <price>164.87</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991070763799706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0132-862X</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Moskva :</acqterms_place>
+              <date>Began in 1931.</date>
+              <publisher>Patriarkhii︠a︡,</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 1994:1- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #: HARR SNA: 96376920-0-0</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o1333720</additional_order_reference>
+            <po_line_number>o10316103</po_line_number>
+            <po_line_price>164.0</po_line_price>
+            <po_line_title>Zhurnal Moskovskoĭ patriarkhii.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>168.27</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>168.27</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+      </invoice_line_list>
+    </invoice>
+  </invoice_list>
+</payment_data>

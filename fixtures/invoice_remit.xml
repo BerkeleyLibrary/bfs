@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_data xmlns="http://com/exlibris/repository/acq/invoice/xmlbeans">
+  <invoice_list>
+    <invoice>
+      <invoice_number>0445298</invoice_number>
+      <invoice_owner>University of California Berkeley</invoice_owner>
+      <approved_by>Hemhauser Mark</approved_by>
+      <invoice_amount>
+        <currency>USD</currency>
+        <sum>18615</sum>
+      </invoice_amount>
+      <vendor_code>ebsco</vendor_code>
+      <vendor_name>EBSCO SUBSCRIPTION SERVICES</vendor_name>
+      <vendor_additional_code>LA36077</vendor_additional_code>
+      <vendor_FinancialSys_Code>0000554796-3</vendor_FinancialSys_Code>
+      <vendor_liable_for_vat>true</vendor_liable_for_vat>
+      <vendor_payment_address_list>
+        <payment_address preferred="true">
+          <line1>EBSCO</line1>
+          <line2>PO BOX 92901</line2>
+          <line3>LOS ANGELES CA 90009</line3>
+          <note>Remit:7</note>
+          <types>
+            <type>Billing</type>
+            <type>Claim</type>
+            <type>Order</type>
+            <type>Payment</type>
+            <type>Returns</type>
+            <type>Shipping</type>
+          </types>
+        </payment_address>
+      </vendor_payment_address_list>
+      <vendor_account_code>ebsco</vendor_account_code>
+      <unique_identifier>3489618510006532</unique_identifier>
+      <invoice_date>03/17/2021</invoice_date>
+      <payment_method>ACCOUNTINGDEPARTMENT</payment_method>
+      <number_of_attachments>1</number_of_attachments>
+      <invoice_ownered_entity>
+        <createdBy>10153575</createdBy>
+        <creationDate>20210525</creationDate>
+        <customerId>6530</customerId>
+        <institutionId>6532</institutionId>
+        <modifiedBy>10153575</modifiedBy>
+      </invoice_ownered_entity>
+      <vat_info>
+        <expended_from_fund_ind>true</expended_from_fund_ind>
+        <inclusive_ind>true</inclusive_ind>
+        <vat_amount>0.0</vat_amount>
+        <vat_percentage>0.0</vat_percentage>
+        <vat_type>LINEEXCLUSIVE</vat_type>
+        <vat_in_invoice_line_level>false</vat_in_invoice_line_level>
+      </vat_info>
+      <additional_charges>
+        <discount_amount>0.0</discount_amount>
+        <insurance_amount>0.0</insurance_amount>
+        <overhead_amount>0.0</overhead_amount>
+        <shipment_amount>0.0</shipment_amount>
+        <total_charges_amount>0.0</total_charges_amount>
+      </additional_charges>
+      <invoice_line_list>
+        <invoice_line>
+          <line_number>2</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>jan - dec 2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>2855.0</total_price>
+          <price>2855.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991064868819706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0267-5498</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>[Hoboken, N.J.] :</acqterms_place>
+              <date>Began in 1998?</date>
+              <publisher>Wiley-Blackwell</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: Begin with 2000- to continue until cancelled</vendor_note>
+            <vendor_reference_number>VEN TITL #:</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o2119584</additional_order_reference>
+            <po_line_number>o10617632</po_line_number>
+            <po_line_price>2813.58</po_line_price>
+            <po_line_title>Linguistics abstracts online.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>2855</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>2855</sum>
+              </local_amount>
+              <code>lings</code>
+              <name>LING-SCHIRALDI</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>4</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>2020</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>1693.0</total_price>
+          <price>1693.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991028777089706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>Ipswich, MA :</acqterms_place>
+              <date>Began in 2004?</date>
+              <publisher>EBSCO</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: EBSCOHOST database (July-June cycle)</vendor_note>
+            <vendor_reference_number>VEN TITL #: LA36082-75</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13043596</additional_order_reference>
+            <po_line_number>o1080688x</po_line_number>
+            <po_line_price>1684.9</po_line_price>
+            <po_line_title>Index to printed music [electronic resource].</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>1693</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>1693</sum>
+              </local_amount>
+              <code>musis</code>
+              <name>MUSI-SHEPARD</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>6</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>996.0</total_price>
+          <price>996.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991072060189706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0019-4050</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Birmingham, AL :</acqterms_place>
+              <date>Began in 2005?</date>
+              <publisher>EBSCO Information Services</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: EBSCOHOST database (July-June cycle)</vendor_note>
+            <vendor_reference_number>VEN TITL #: LA36082-75</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13798790</additional_order_reference>
+            <po_line_number>o11005014</po_line_number>
+            <po_line_price>990.64</po_line_price>
+            <po_line_title>Index to Jewish periodicals [electronic resource].</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>996</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>996</sum>
+              </local_amount>
+              <code>judas</code>
+              <name>JUDA-HABER</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>1</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>1037.0</total_price>
+          <price>1037.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991035069839706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0094-3770</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>Stanford, Calif. [etc.],</acqterms_place>
+              <date>1967-1994.</date>
+              <publisher>American Association for the Advancement of Slavic Studies etc</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: EBSCOHOST database (July-June cycle)</vendor_note>
+            <vendor_reference_number>VEN TITL #: LA36082-75</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o2022813</additional_order_reference>
+            <po_line_number>o10533977</po_line_number>
+            <po_line_price>1032.26</po_line_price>
+            <po_line_title>The American bibliography of Slavic and East European studies.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>1037</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>1037</sum>
+              </local_amount>
+              <code>slavs</code>
+              <name>SLAV-PENDSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>5</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>v. 23 2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>6068.0</total_price>
+          <price>6068.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991033820829706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>[Bronx, N.Y.] :</acqterms_place>
+              <date>Began in 2001.</date>
+              <publisher>HW Wilson Co</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: EBSCOHOST database (July-June cycle)</vendor_note>
+            <vendor_reference_number>VEN TITL #: LA36082-75</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13450918</additional_order_reference>
+            <po_line_number>o10889358</po_line_number>
+            <po_line_price>5979.36</po_line_price>
+            <po_line_title>Biography reference bank [electronic resource].</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>3034</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>3034</sum>
+              </local_amount>
+              <code>ahi3s</code>
+              <name>ARTS-SCHEEL</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>3034</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>3034</sum>
+              </local_amount>
+              <code>sos2s</code>
+              <name>SOSC-EDWARDS</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>7</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <secondary_reporting_code>FORM2:a</secondary_reporting_code>
+          <additional_information>jan - dec 2021</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>5793.0</total_price>
+          <price>5793.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991077371249706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>0162-2811</acqterms_identifier>
+              <acqterms_identifierType>ISSN</acqterms_identifierType>
+              <acqterms_place>[Thousand Oaks, Calif.] :</acqterms_place>
+              <creator>Communication abstracts (Online)</creator>
+              <date>Print began in 1978.</date>
+              <publisher>Sage Publications</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: EBSCOHOST database (July-June cycle)</vendor_note>
+            <vendor_reference_number>CSA CUST NO: UCAL1000</vendor_reference_number>
+            <additional_order_reference>OLD ORD #: .o13841841</additional_order_reference>
+            <po_line_number>o11034166</po_line_number>
+            <po_line_price>5708.36</po_line_price>
+            <po_line_title>Communication abstracts [electronic resource].</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>1911.69</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>1911.69</sum>
+              </local_amount>
+              <code>jours</code>
+              <name>JOUR-TANASSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>1911.69</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>1911.69</sum>
+              </local_amount>
+              <code>masss</code>
+              <name>MASS-TANASSE</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>1969.62</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>1969.62</sum>
+              </local_amount>
+              <code>refes</code>
+              <name>REFE-SCHEEL</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>3</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:s</reporting_code>
+          <additional_information>july - june 2021-2022</additional_information>
+          <subscription_dates_range>-</subscription_dates_range>
+          <total_price>173.0</total_price>
+          <price>173.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>false</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991080105329706532</mms_record_id>
+            <meta_data_values>
+              <acqterms_place>Bronx, N.Y. :</acqterms_place>
+              <date>Began in 2008.</date>
+              <publisher>HW Wilson Co</publisher>
+            </meta_data_values>
+            <vendor_note>IDENTITY: To Begin: July 2018-</vendor_note>
+            <vendor_reference_number>VEN TITL #:</vendor_reference_number>
+            <additional_order_reference>OLD ORD #:</additional_order_reference>
+            <po_line_number>o18958199</po_line_number>
+            <po_line_price>175.59</po_line_price>
+            <po_line_title>Essay and general literature retrospective [electronic resource].</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>173</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>173</sum>
+              </local_amount>
+              <code>refes</code>
+              <name>REFE-SCHEEL</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54218-19942-16590-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+      </invoice_line_list>
+    </invoice>
+    <invoice>
+      <invoice_number>3456987</invoice_number>
+      <invoice_owner>Doe Library</invoice_owner>
+      <approved_by>Hemhauser Mark</approved_by>
+      <invoice_amount>
+        <currency>USD</currency>
+        <sum>136.5</sum>
+      </invoice_amount>
+      <vendor_code>gobi</vendor_code>
+      <vendor_name>GOBI</vendor_name>
+      <vendor_FinancialSys_Code>0000003046</vendor_FinancialSys_Code>
+      <vendor_liable_for_vat>true</vendor_liable_for_vat>
+      <vendor_payment_address_list>
+        <payment_address preferred="true">
+          <line1>GOBI</line1>
+          <line2>999 Maple St</line2>
+          <line3>Contoocook, NH 03229-7991</line3>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+        <payment_address preferred="false">
+          <line1>Remit A</line1>
+          <line2>PO Box 277991</line2>
+          <line3>Atlanta, GA 30384-7991</line3>
+          <types>
+            <type>Billing</type>
+            <type>Shipping</type>
+            <type>Order</type>
+            <type>Claim</type>
+            <type>Payment</type>
+            <type>Returns</type>
+          </types>
+        </payment_address>
+      </vendor_payment_address_list>
+      <vendor_account_code>gobi</vendor_account_code>
+      <unique_identifier>3489543520006532</unique_identifier>
+      <invoice_date>05/24/2021</invoice_date>
+      <payment_method>ACCOUNTINGDEPARTMENT</payment_method>
+      <number_of_attachments>1</number_of_attachments>
+      <invoice_ownered_entity>
+        <createdBy>10153575</createdBy>
+        <creationDate>20210524</creationDate>
+        <customerId>6530</customerId>
+        <institutionId>6532</institutionId>
+        <modifiedBy>10153575</modifiedBy>
+      </invoice_ownered_entity>
+      <vat_info>
+        <expended_from_fund_ind>true</expended_from_fund_ind>
+        <inclusive_ind>true</inclusive_ind>
+        <vat_amount>0.0</vat_amount>
+        <vat_percentage>0.0</vat_percentage>
+        <vat_type>INCLUSIVE</vat_type>
+        <vat_in_invoice_line_level>false</vat_in_invoice_line_level>
+      </vat_info>
+      <invoice_line_list>
+        <invoice_line>
+          <line_number>1</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <total_price>70.0</total_price>
+          <price>70.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991085731072906532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>9781119967507</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>CHICHESTER</acqterms_place>
+              <creator>ROBB, L. J</creator>
+              <date>2021</date>
+              <publisher>WILEY-BLACKWELL</publisher>
+            </meta_data_values>
+            <vendor_note>820120</vendor_note>
+            <vendor_reference_number>99986225183</vendor_reference_number>
+            <po_line_number>POL-214</po_line_number>
+            <po_line_price>70.0</po_line_price>
+            <po_line_title>INTRODUCTION TO ORE-FORMING PROCESSES.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>70</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>70</sum>
+              </local_amount>
+              <code>eartm</code>
+              <name>EART-TEPLITZKY</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>2</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <total_price>16.5</total_price>
+          <price>16.5</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991085731174306532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>9781775845560</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>CAPE TOWN</acqterms_place>
+              <creator>CAIRNCROSS, BRUCE</creator>
+              <date>2019</date>
+              <publisher>PENGUIN RNDM HOUSE STRUIK</publisher>
+            </meta_data_values>
+            <vendor_note>820120</vendor_note>
+            <vendor_reference_number>99986225154</vendor_reference_number>
+            <po_line_number>POL-213</po_line_number>
+            <po_line_price>16.5</po_line_price>
+            <po_line_title>MINERALS &amp;amp; GEMSTONES OF EAST AFRICA : BURUNDI, KENYA, RWANDA, TANZANIA AND UGANDA.</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>16.5</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>16.5</sum>
+              </local_amount>
+              <code>eartm</code>
+              <name>EART-TEPLITZKY</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>3</line_number>
+          <line_type>REGULAR</line_type>
+          <quantity>1</quantity>
+          <reporting_code>FORM:p</reporting_code>
+          <tertiary_reporting_code>T</tertiary_reporting_code>
+          <total_price>50.0</total_price>
+          <price>50.0</price>
+          <po_line_info>
+            <fully_Invoiced_ind>true</fully_Invoiced_ind>
+            <po_line_owner>Doe Library</po_line_owner>
+            <mms_record_id>991085731073006532</mms_record_id>
+            <meta_data_values>
+              <acqterms_identifier>9780816541485</acqterms_identifier>
+              <acqterms_identifierType>ISBN</acqterms_identifierType>
+              <acqterms_place>TUCSON</acqterms_place>
+              <date>2020</date>
+              <publisher>UNIV OF ARIZONA PRESS</publisher>
+            </meta_data_values>
+            <vendor_note>820135</vendor_note>
+            <vendor_reference_number>99986225123</vendor_reference_number>
+            <po_line_number>POL-210</po_line_number>
+            <po_line_price>50.0</po_line_price>
+            <po_line_title>RENEWING OUR RIVERS : STREAM CORRIDOR RESTORATION IN DRYLAND REGIONS</po_line_title>
+          </po_line_info>
+          <fund_info_list>
+            <fund_info>
+              <amount>
+                <currency>USD</currency>
+                <sum>50</sum>
+              </amount>
+              <local_amount>
+                <currency>USD</currency>
+                <sum>50</sum>
+              </local_amount>
+              <code>envim</code>
+              <name>ENVI-EIFLER</name>
+              <fiscal_period>FY-2021</fiscal_period>
+              <external_id>1-54211-19942-16085-60</external_id>
+              <type>ALLOCATED</type>
+              <ledger_code>UCB_Ledger</ledger_code>
+              <ledger_name>Library Ledger</ledger_name>
+            </fund_info>
+          </fund_info_list>
+        </invoice_line>
+        <invoice_line>
+          <line_number>999991</line_number>
+          <line_type>SHIPMENT</line_type>
+          <quantity>0</quantity>
+          <total_price>0.0</total_price>
+          <price>0.0</price>
+        </invoice_line>
+        <invoice_line>
+          <line_number>999992</line_number>
+          <line_type>DISCOUNT</line_type>
+          <quantity>0</quantity>
+          <total_price>0.0</total_price>
+          <price>0.0</price>
+        </invoice_line>
+        <invoice_line>
+          <line_number>999993</line_number>
+          <line_type>OVERHEAD</line_type>
+          <quantity>0</quantity>
+          <total_price>0.0</total_price>
+          <price>0.0</price>
+        </invoice_line>
+        <invoice_line>
+          <line_number>999994</line_number>
+          <line_type>INSURANCE</line_type>
+          <quantity>0</quantity>
+          <total_price>0.0</total_price>
+          <price>0.0</price>
+        </invoice_line>
+      </invoice_line_list>
+    </invoice>
+  </invoice_list>
+</payment_data>

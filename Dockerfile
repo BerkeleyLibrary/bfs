@@ -20,4 +20,9 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY ./Gemfile /app
-COPY ./src/* /app
+COPY ./src/ /app/src
+CMD ["bundle","exec","ruby","./src/invoice_wrapper.rb"]
+
+
+
+
