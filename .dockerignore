@@ -1,0 +1,6 @@
+; Retain structure but not contents of ./data
+data/*/*
+!data/*/.keep
+
+; Ignore bundle-installed deps
+vendor

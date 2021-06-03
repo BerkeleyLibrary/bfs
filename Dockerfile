@@ -1,28 +1,15 @@
-FROM ruby:2.5-alpine3.12 AS base
-RUN apk --no-cache --update upgrade && apk add --no-cache build-base\
-&&  apk --no-cache add \
-        bash \
-        ruby-dev \
-        libc6-compat \
-        git \
-        libxml2-dev \
-        libxslt-dev \
-        libffi-dev \
-        tzdata \
-        xz-libs \
-        yarn \
-        shared-mime-info \ 
-&&  rm -rf /var/cache/apk/*
+FROM registry.access.redhat.com/ubi7/ruby-27
 
+# Install app dependencies/source code
+USER root
+COPY Gemfile* ./
+RUN bundle install --system
+COPY . .
 
-WORKDIR /app
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
-RUN bundle install
-COPY ./Gemfile /app
-COPY ./src/ /app/src
-CMD ["bundle","exec","ruby","./src/invoice_wrapper.rb"]
+USER default
 
+# Set a friendly entrypoint
+ENTRYPOINT ["bundle", "exec", "--", "ruby", "/opt/app-root/src/src/invoice_parser.rb"]
 
-
-
+# Files to be processed should be mounted here
+WORKDIR /opt/app-root/src/data
