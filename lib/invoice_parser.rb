@@ -13,9 +13,9 @@ home_dir = Dir.pwd
 in_dir = "#{home_dir}/in_dir"
 processed_dir = "#{home_dir}/processed"
 log_dir = "#{home_dir}/log_dir"
-@out_file = "#{processed_dir}/BFSINPUT#{now}.txt"
+@out_file = "#{processed_dir}/#{input_file.gsub(/\.xml/,"_#{now}.txt")}"
 
-@error_file = "#{log_dir}/BFSINPUT#{now}_errors.txt"
+@error_file = "#{log_dir}/#{input_file.gsub(/\.xml/,"_#{now}_errors.txt")}"
 @has_valid_invoice = false
 @writer = File.open(@out_file,"w")
 
