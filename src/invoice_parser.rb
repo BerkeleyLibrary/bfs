@@ -11,18 +11,15 @@ input_file = ARGV[0]
 
 home_dir = Dir.pwd
 in_dir = "#{home_dir}/in_dir"
-out_dir = "#{home_dir}/out_dir"
 processed_dir = "#{home_dir}/processed"
 log_dir = "#{home_dir}/log_dir"
-@out_file = "#{out_dir}/BFSINPUT#{now}.txt"
+@out_file = "#{processed_dir}/BFSINPUT#{now}.txt"
 
 @error_file = "#{log_dir}/BFSINPUT#{now}_errors.txt"
 @has_valid_invoice = false
 @writer = File.open(@out_file,"w")
 
 def self.handle_errors(invoice,errors)
-  File.delete(@out_file) if File.exist?(@out_file)
- 
   write_errors = File.open(@error_file,"a")
  
   write_errors.write("**********************\n") 
@@ -95,7 +92,8 @@ if @has_valid_invoice
   footer = InvoiceSections::process_footer(invoice_count,item_count,grand_total)
   @writer.write(footer)
   @writer.close
-#  FileUtils.mv("#{in_dir}/#{input_file}",processed_dir) 
+  FileUtils.mv("#{in_dir}/#{input_file}","#{processed_dir}/source_files/#{input_file}") 
 else
-#  FileUtils.mv("#{in_dir}/#{input_file}","#{processed_dir}/#{input_file}_error") 
+  File.delete(@out_file) if File.exist?(@out_file)
+  FileUtils.mv("#{in_dir}/#{input_file}","#{processed_dir}/source_files/#{input_file}_error") 
 end

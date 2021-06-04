@@ -9,7 +9,7 @@ COPY . .
 USER default
 
 # Set a friendly entrypoint
-ENTRYPOINT ["bundle", "exec", "--", "ruby", "/opt/app-root/src/src/invoice_parser.rb"]
+ENTRYPOINT ["bash", "/opt/app-root/src/src/wrapper.sh"]
 
 # Files to be processed should be mounted here
 WORKDIR /opt/app-root/src/data
