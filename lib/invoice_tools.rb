@@ -32,6 +32,29 @@ def self.process_sign(value)
   end
 end
 
+def self.parse_tax_code(invoice_data)
+  tax_codes = []
+  count = 0
+  invoice_data.xpath("//invoice_line_list/invoice_line").each do |line|
+    tax_codes[count] = "0 " #default tax code
+    xml = Nokogiri::XML(line.to_xml)
+
+    xml.xpath("//tertiary_reporting_code").each do |line|
+
+      #will flush this out when they figure out how to handle all the various tax code options.
+      #Going by assumption that only possible values are t which will result in default "A " or "0" which is no tax
+      #BFS can handle mutliple use tax codes but as of now we'll only use two with Alma.
+      line = line.text.gsub(/FORM3\:/i,"")
+      if line.match?(/t/i) 
+        tax_codes[count] = "A "
+      end
+
+    end          
+    
+    count += 1
+  end
+  return tax_codes
+end
 
 def self.parse_external(invoice_data)
   business_units = []
@@ -126,7 +149,8 @@ end
 
 def self.get_invoice_total(invoice_data)
   sum = 0
-  invoice_data['item_total_price'].each do |value|
+  #invoice_data['item_total_price'].each do |value|
+  invoice_data['item_price'].each do |value|
     sum += value.to_f
     sum = sum.round(2)
   end

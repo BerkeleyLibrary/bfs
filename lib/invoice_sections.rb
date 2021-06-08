@@ -40,7 +40,8 @@ def self.process_invoice_entry(invoice_data)
 
   count = 0
   #we will supply an invidual line for each gross_amount 
-  invoice_data['item_total_price'].each do |value| 
+  #invoice_data['item_total_price'].each do |value| 
+  invoice_data['item_price'].each do |value| 
   
     #get the invoice price and sign (either negative, or blank for positive) 
     invoice_item_price,sign = InvoiceTools::process_sign(value)
@@ -58,7 +59,8 @@ def self.process_invoice_entry(invoice_data)
     dist << sign
     dist << InvoiceTools::repeated(" ",4) #filler
     dist << InvoiceTools::repeated(" ",2) #10 99 tax code, not used
-    dist << "A "  #tax code. hard coding A for testing need to add this in when know
+    #dist << "A "  #tax code. hard coding A for testing need to add this in when know
+    dist << invoice_data['tax_code'][count].to_s  #tax code. hard coding A for testing need to add this in when know
     dist << InvoiceTools::repeated(" ",8) #filler
     dist << InvoiceTools::repeated(" ",10) #speed type not used
     dist << invoice_data['business_unit'][count].to_s

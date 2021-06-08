@@ -19,10 +19,18 @@ pad_settings:
     pad: 10 
     separator: "0"
     adjust: "rjust"
+  item_price:
+    pad: 10 
+    separator: "0"
+    adjust: "rjust"
   sum:
     pad: 10 
     separator: "0"
     adjust: "rjust"
+  tax_code:
+    pad: 2 
+    separator: " "
+    adjust: "ljust"
   sales_tax:
     pad: 12 
     separator: " "
@@ -101,3 +109,9 @@ pad_settings:
     pad: 2 
     separator: " "
     adjust: "rjust"
+  payment_method:
+    pad: 20 
+    separator: " "
+    adjust: "rjust"
+  line_number:
+    pad:

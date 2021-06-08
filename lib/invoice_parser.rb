@@ -45,7 +45,9 @@ doc.xpath("//invoice").each do |data|
   invoice_data['invoice_number'] = InvoiceTools::get_data(invoice,"//invoice_number") 
   invoice_data['vendor_FinancialSys_Code'] =  InvoiceTools::get_data(invoice,"//vendor_FinancialSys_Code")  #required
   #invoice_data['gross_amount'] = InvoiceTools::get_data(invoice,"//invoice_amount/sum") 
-  invoice_data['item_total_price'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/local_amount/sum") 
+  #invoice_data['item_total_price'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/local_amount/sum") 
+  invoice_data['item_price'] = InvoiceTools::get_data(invoice,"//invoice_line_list/invoice_line/price")
+  invoice_data['tax_code'] = InvoiceTools::parse_tax_code(invoice)
   invoice_data['sales_tax'] = InvoiceTools::get_data(invoice,"//vat_info/vat_amount") 
   invoice_data['invoice_date'] = InvoiceTools::get_data(invoice,"//invoice_date") 
   invoice_data['creation_date'] = InvoiceTools::get_data(invoice,"//invoice_ownered_entity/creationDate") 
@@ -53,6 +55,8 @@ doc.xpath("//invoice").each do |data|
   invoice_data['ship_amount'] = InvoiceTools::get_data(invoice,"//additional_charges/shipment_amount") 
   invoice_data['remit_address_sequence'] = InvoiceTools::get_data(invoice,"//vendor_additional_code") #required, default is A if not present
   invoice_data['reference_voucher'] = InvoiceTools::get_data(invoice,"//unique_identifier") #required 
+  invoice_data['payment_method'] = InvoiceTools::get_data(invoice,"//payment_method") #required 
+  invoice_data['line_number'] = InvoiceTools::get_data(invoice,"///invoice_line_list/invoice_line/line_number") #required 
 
   #external id will be parsed and put into invoice_data hash for business unit, account, fund, org and program 
   invoice_data['external_id'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/external_id") #required, will be broken down into multiple fields
@@ -73,7 +77,8 @@ doc.xpath("//invoice").each do |data|
   invoice_data['sum'] = InvoiceTools::get_invoice_total(invoice_data)
   InvoiceTools::format_price(invoice_data,'sum')
   grand_total = invoice_data['sum'][0].to_i + grand_total 
-  InvoiceTools::format_price(invoice_data,'item_total_price')
+  #InvoiceTools::format_price(invoice_data,'item_total_price')
+  InvoiceTools::format_price(invoice_data,'item_price')
   InvoiceTools::format_invoice_date(invoice_data)
 
 
@@ -85,7 +90,8 @@ doc.xpath("//invoice").each do |data|
   @writer.write(item_entries)
 
   invoice_count += 1
-  item_count += invoice_data['item_total_price'].length
+  #item_count += invoice_data['item_total_price'].length
+  item_count += invoice_data['item_price'].length
 end
 
 if @has_valid_invoice
