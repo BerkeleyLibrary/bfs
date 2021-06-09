@@ -10,9 +10,9 @@ now = Time.now.utc.strftime("%Y%m%d%H%M%S")
 input_file = ARGV[0]
 
 home_dir = Dir.pwd
-in_dir = "#{home_dir}/in_dir"
-processed_dir = "#{home_dir}/processed"
-log_dir = "#{home_dir}/log_dir"
+in_dir = "#{home_dir}/invoicing/pay"
+processed_dir = "#{home_dir}/output/processed"
+log_dir = "#{home_dir}/output/rejected"
 @out_file = "#{processed_dir}/#{input_file.gsub(/\.xml/,"_#{now}.txt")}"
 
 @error_file = "#{log_dir}/#{input_file.gsub(/\.xml/,"_#{now}_errors.txt")}"
@@ -53,10 +53,10 @@ doc.xpath("//invoice").each do |data|
   invoice_data['creation_date'] = InvoiceTools::get_data(invoice,"//invoice_ownered_entity/creationDate") 
   invoice_data['overhead'] = InvoiceTools::get_data(invoice,"//additional_charges/overhead_amount") 
   invoice_data['ship_amount'] = InvoiceTools::get_data(invoice,"//additional_charges/shipment_amount") 
-  invoice_data['remit_address_sequence'] = InvoiceTools::get_data(invoice,"//vendor_additional_code") #required, default is A if not present
+  invoice_data['remit_address_sequence'] = InvoiceTools::get_data(invoice,"//vendor_additional_code") #required, default is 0 if not present
   invoice_data['reference_voucher'] = InvoiceTools::get_data(invoice,"//unique_identifier") #required 
-  invoice_data['payment_method'] = InvoiceTools::get_data(invoice,"//payment_method") #required 
-  invoice_data['line_number'] = InvoiceTools::get_data(invoice,"///invoice_line_list/invoice_line/line_number") #required 
+  invoice_data['payment_method'] = InvoiceTools::get_data(invoice,"//payment_method") 
+  invoice_data['line_number'] = InvoiceTools::get_data(invoice,"///invoice_line_list/invoice_line/line_number") 
 
   #external id will be parsed and put into invoice_data hash for business unit, account, fund, org and program 
   invoice_data['external_id'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/external_id") #required, will be broken down into multiple fields
@@ -98,8 +98,8 @@ if @has_valid_invoice
   footer = InvoiceSections::process_footer(invoice_count,item_count,grand_total)
   @writer.write(footer)
   @writer.close
-  FileUtils.mv("#{in_dir}/#{input_file}","#{processed_dir}/source_files/#{input_file}") 
+  FileUtils.mv("#{in_dir}/#{input_file}","#{in_dir}/processed/#{input_file}") 
 else
   File.delete(@out_file) if File.exist?(@out_file)
-  FileUtils.mv("#{in_dir}/#{input_file}","#{processed_dir}/source_files/#{input_file}_error") 
+  FileUtils.mv("#{in_dir}/#{input_file}","#{in_dir}/processed/#{input_file}") 
 end

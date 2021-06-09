@@ -79,7 +79,7 @@ def self.required_item_fields(invoice)
      
       unless invoice[field][elem].to_s.match(/\w/) 
           
-          errors << "Invoice missing required field: #{field}. line number #{invoice['line_number'][elem]}\n" 
+          errors << "Invoice missing required field: #{field}. line_number: #{invoice['line_number'][elem]}\n" 
           #errors << "Invoice missing required field: #{field}."
       end
       elem += 1

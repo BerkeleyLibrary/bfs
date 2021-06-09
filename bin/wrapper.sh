@@ -1,11 +1,11 @@
 dir=$PWD
 while true 
 do
-  for file in $(ls $dir/in_dir) 
+  #for file in $(ls $dir/invoicing/pay) 
+  for file in $(ls $dir/invoicing/pay -p | grep -v /)
   do
-
-  #for file in $dir/in_dir/*; do
     input_file="$(basename ${file})"
+    printf $input_file
     ruby /opt/app-root/src/lib/invoice_parser.rb $input_file 
     
     sleep 2
