@@ -1,4 +1,4 @@
-data/*/*
-!data/*/.keep
+data/**/
+!data/**/.keep
 
 vendor
