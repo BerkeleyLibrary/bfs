@@ -104,8 +104,8 @@ end
 
 #Will log error, if fatal flag will stop processing
 def handle_error(msg,invoice,fatal=false)
-  puts msg 
-  puts invoice
+  #puts msg 
+  #puts invoice
   #todo write to log file
 end
 
@@ -121,18 +121,24 @@ def handle_errors(invoice,errors)
   write_errors.close
 end
 
-def self.get_data(invoice,xpath,required=false)
+def self.get_items(invoice,xpath)
+  items = []
+  invoice.xpath("//invoice_line").each do |line|
+    xml = Nokogiri::XML(line.to_xml)
+    value = ""
+    xml.xpath(xpath).each do |field|
+      value = field.text
+    end   
+    items << value
+  end
+  return items 
+end
+
+
+def self.get_data(invoice,xpath=false)
   line_items = []
-  errors = ""
- 
   invoice.xpath(xpath).each do |line|
     line_items << line.text
-  end
-
-  if line_items.empty? && required
-    errors << "Can't file path for #{xpath}"
-    #handle_error("Can't find #{xpath}",invoice,required)
-    #return line_items
   end
   
   return line_items

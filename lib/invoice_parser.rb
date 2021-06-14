@@ -42,27 +42,30 @@ doc.xpath("//invoice").each do |data|
   invoice = Nokogiri::XML(data.to_xml) 
   
   invoice_data = {} 
+  invoice_data['external_id'] = InvoiceTools::get_items(invoice,"/invoice_line/fund_info_list/fund_info/external_id")
   invoice_data['invoice_number'] = InvoiceTools::get_data(invoice,"//invoice_number") 
   invoice_data['vendor_FinancialSys_Code'] =  InvoiceTools::get_data(invoice,"//vendor_FinancialSys_Code")  #required
   #invoice_data['gross_amount'] = InvoiceTools::get_data(invoice,"//invoice_amount/sum") 
   #invoice_data['item_total_price'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/local_amount/sum") 
-  invoice_data['item_price'] = InvoiceTools::get_data(invoice,"//invoice_line_list/invoice_line/price")
+  #invoice_data['item_price'] = InvoiceTools::get_data(invoice,"//invoice_line_list/invoice_line/price")
+  invoice_data['item_price'] = InvoiceTools::get_items(invoice,"/invoice_line/price")
   invoice_data['tax_code'] = InvoiceTools::parse_tax_code(invoice)
-  invoice_data['sales_tax'] = InvoiceTools::get_data(invoice,"//vat_info/vat_amount") 
+  #invoice_data['sales_tax'] = InvoiceTools::get_data(invoice,"//vat_info/vat_amount") 
+  invoice_data['sales_tax'] = InvoiceTools::get_items(invoice,"/invoice_line/vat_info/vat_amount") 
   invoice_data['invoice_date'] = InvoiceTools::get_data(invoice,"//invoice_date") 
   invoice_data['creation_date'] = InvoiceTools::get_data(invoice,"//invoice_ownered_entity/creationDate") 
   invoice_data['overhead'] = InvoiceTools::get_data(invoice,"//additional_charges/overhead_amount") 
   invoice_data['ship_amount'] = InvoiceTools::get_data(invoice,"//additional_charges/shipment_amount") 
-  invoice_data['remit_address_sequence'] = InvoiceTools::get_data(invoice,"//vendor_additional_code") #required, default is 0 if not present
+  invoice_data['remit_address_sequence'] = InvoiceTools::get_data(invoice,"/invoice/vendor_additional_code") #required, default is 0 if not present
   invoice_data['reference_voucher'] = InvoiceTools::get_data(invoice,"//unique_identifier") #required 
   invoice_data['payment_method'] = InvoiceTools::get_data(invoice,"//payment_method") 
-  invoice_data['line_number'] = InvoiceTools::get_data(invoice,"///invoice_line_list/invoice_line/line_number") 
+  #invoice_data['line_number'] = InvoiceTools::get_data(invoice,"//invoice_line_list/invoice_line/line_number") 
+  invoice_data['line_number'] = InvoiceTools::get_items(invoice,"/invoice_line/line_number") 
 
   #external id will be parsed and put into invoice_data hash for business unit, account, fund, org and program 
-  invoice_data['external_id'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/external_id") #required, will be broken down into multiple fields
+  #invoice_data['external_id'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/external_id") #required, will be broken down into multiple fields
   InvoiceTools::parse_external(invoice_data)
-
-  #is parsed from vendor_FinacialSys_Code (default is "A", if ends in "-digits) it will use digits after the dash
+  
   InvoiceTools::get_remit_to(invoice_data)
 
   errors = Validations::validate(invoice_data)
