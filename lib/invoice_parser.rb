@@ -8,8 +8,9 @@ require_relative 'invoice_tools'
 
 now = Time.now.utc.strftime("%Y%m%d%H%M%S")
 input_file = ARGV[0]
-
-home_dir = Dir.pwd
+home_dir = File.expand_path("..",Dir.pwd)
+home_dir = "#{home_dir}/data" 
+#home_dir = Dir.pwd
 in_dir = "#{home_dir}/invoicing/pay"
 processed_dir = "#{home_dir}/output/processed"
 log_dir = "#{home_dir}/output/rejected"
