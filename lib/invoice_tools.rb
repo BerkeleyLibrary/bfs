@@ -121,6 +121,14 @@ def handle_errors(invoice,errors)
   write_errors.close
 end
 
+def self.calculate_pre_tax(price,tax=9.25)
+  tax = tax.to_f/100
+  tax = 1 + tax.to_f
+  pre_tax = price/tax.to_f
+  
+  return pre_tax.round(2)
+end
+
 def self.get_items(invoice,xpath)
   items = []
   invoice.xpath("//invoice_line").each do |line|
@@ -128,7 +136,7 @@ def self.get_items(invoice,xpath)
     value = ""
     xml.xpath(xpath).each do |field|
       value = field.text
-    end   
+    end 
     items << value
   end
   return items 

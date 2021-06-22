@@ -2,13 +2,34 @@ module Validations
 require 'nokogiri'
 require 'date'
 
-def self.validate(invoice)
+def self.validate(invoice,invoice_xml)
   errors = required_header_fields(invoice)
   errors << max_size(invoice,'vendor_FinancialSys_Code',10) 
   errors << max_size(invoice,'invoice_number',12) 
+  errors << multiple_chart_strings(invoice,invoice_xml)
   errors << external_id_format(invoice)
   errors << payment_method(invoice)
   errors << invoice_date_valid(invoice['invoice_date'][0])
+  return errors
+end
+
+def self.multiple_chart_strings(invoice,invoice_xml)
+  errors = ""
+  count = 0
+  invoice_xml.xpath("//invoice_line").each do |line|
+    xml = Nokogiri::XML(line.to_xml)
+    value = ""
+    items = []
+    xml.xpath("//fund_info_list/fund_info/external_id").each do |field|
+      value = field.text
+      items << value
+    end
+    if items.uniq.length > 1 
+      errors << "There are differing chart strings in a line item. line number #{invoice['line_number'][count]}\n"
+    end
+    count += 1
+  end
+
   return errors
 end
 

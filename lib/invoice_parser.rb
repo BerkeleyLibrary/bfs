@@ -12,8 +12,8 @@ home_dir = File.expand_path("..",Dir.pwd)
 home_dir = "#{home_dir}/data" 
 #home_dir = Dir.pwd
 in_dir = "#{home_dir}/invoicing/pay"
-processed_dir = "#{home_dir}/output/processed"
-log_dir = "#{home_dir}/output/rejected"
+processed_dir = "#{home_dir}/processed"
+log_dir = "#{home_dir}/rejected"
 @out_file = "#{processed_dir}/#{input_file.gsub(/\.xml/,"_#{now}.txt")}"
 
 @error_file = "#{log_dir}/#{input_file.gsub(/\.xml/,"_#{now}_errors.txt")}"
@@ -43,7 +43,8 @@ doc.xpath("//invoice").each do |data|
   invoice = Nokogiri::XML(data.to_xml) 
   
   invoice_data = {} 
-  invoice_data['external_id'] = InvoiceTools::get_items(invoice,"/invoice_line/fund_info_list/fund_info/external_id")
+  #invoice_data['external_id'] = InvoiceTools::get_items(invoice,"/invoice_line/fund_info_list/fund_info/external_id")
+  invoice_data['external_id'] = InvoiceTools::get_items(invoice,"//fund_info_list/fund_info/external_id")
   invoice_data['invoice_number'] = InvoiceTools::get_data(invoice,"//invoice_number") 
   invoice_data['vendor_FinancialSys_Code'] =  InvoiceTools::get_data(invoice,"//vendor_FinancialSys_Code")  #required
   #invoice_data['gross_amount'] = InvoiceTools::get_data(invoice,"//invoice_amount/sum") 
@@ -69,7 +70,7 @@ doc.xpath("//invoice").each do |data|
   
   InvoiceTools::get_remit_to(invoice_data)
 
-  errors = Validations::validate(invoice_data)
+  errors = Validations::validate(invoice_data,invoice)
   if errors.empty?
     @has_valid_invoice = true
   else

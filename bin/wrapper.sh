@@ -8,5 +8,5 @@ do
     ruby ../lib/invoice_parser.rb $input_file 
     sleep 2
   done
-  sleep 60 
+  sleep 120 
 done
