@@ -5,6 +5,12 @@ services:
     build: .
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: yes
-    networks: []
     volumes:
       - ./:/opt/app-root/src:delegated
+    ports:
+      - 587:587
+    env_file:
+      - run/secrets/mailer.sh
+secrets:
+  mailer:
+    file: mailer.txt

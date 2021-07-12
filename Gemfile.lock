@@ -4,6 +4,9 @@ GEM
     date (3.1.1)
     filewatcher (1.1.1)
       optimist (~> 3.0)
+    mail (2.7.1)
+      mini_mime (>= 0.1.1)
+    mini_mime (1.1.0)
     mini_portile2 (2.5.3)
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
@@ -17,6 +20,7 @@ PLATFORMS
 DEPENDENCIES
   date
   filewatcher
+  mail
   nokogiri
 
 BUNDLED WITH
