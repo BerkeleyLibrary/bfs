@@ -1,16 +1,10 @@
-version: "3.8"
-
 services:
   bfs:
     build: .
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: yes
     volumes:
-      - ./:/opt/app-root/src:delegated
-    ports:
-      - 587:587
-    env_file:
-      - run/secrets/mailer.sh
-secrets:
-  mailer:
-    file: mailer.txt
+      - ./:/opt/app-root/src
+      - ./secrets:/run/secrets:ro
+
+version: "3.8"

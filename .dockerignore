@@ -4,3 +4,9 @@ data/*/*
 
 ; Ignore bundle-installed deps
 vendor
+
+# Let docker have its own bundler config
+.bundle
+
+secrets/*
+!secrets/.keep
