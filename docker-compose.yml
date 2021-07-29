@@ -1,8 +1,10 @@
 services:
   bfs:
     build: .
+    command: watch --interval 10
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: yes
+    network_mode: none
     volumes:
       - ./:/opt/app-root/src
       - ./secrets:/run/secrets:ro

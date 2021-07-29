@@ -1,20 +1,50 @@
 # BFS Processor
 
-## Local Testing
+A command-line tool for processing BFS .xml files. Input files can be mounted anywhere on the filesystem, but by default the program looks at `./data/invoicing/pay/*.xml`. Output files are written to `./data/processed` (originals and re-formatted files) and `./data/rejected` (error logs).
+
+## Building the app
 
 ```sh
-# Build the container
 docker-compose build
+```
 
-# Copy fixtures to data/in_dir
-cp spec/fixtures/*.xml data/invoice/pay
+## Running it
 
-# Run against one of the fixtures or any file put into /data/in_dir.
-docker-compose run --rm --entrypoint=bundle bfs exec ruby ../src/invoice_parser.rb invoice_new_remit.xml
+View the CLI tool help/description:
 
-# Run the wrapper script which will loop through the /data/in_dir directory and process any files present.
-# This is run continuously by default when the container is started.
+```sh
+docker-compose run --rm bfs help
+```
 
-docker-compose up 
+Adds test data to the default watch directory:
 
+```sh
+docker-compose run --rm bfs seed
+```
+
+Run the app in the background. It will continue running, monitoring for .xml files to process every 10s.
+
+```sh
+docker-compose up -d
+docker-compose logs -f # view processing logs in real time
+```
+
+Watch a non-standard directory:
+
+```sh
+docker-compose run --rm bfs watch /path/in/container # absolute path
+docker-compose run --rm bfs watch data/somedir # path relative to /opt/app-root/src
+```
+
+Process a specific file:
+
+```sh
+docker-compose run --rm bfs process /abs/path/to/myfile.xml # absolute path
+docker-compose run --rm bfs process data/invoicing/pay/somefile.xml # relative path
+```
+
+Delete previously processed files and error logs:
+
+```sh
+docker-compose run --rm bfs clear
 ```

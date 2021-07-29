@@ -1,7 +1,22 @@
+# Convoluted gitkeep setting to keep the data directory
+# structure intact without tracking its contents.
 data/*
-!/data/.keep
-data/**/
-!data/**/.keep
+!data/.keep
+!data/processed
+data/processed/*
+!data/processed/.keep
+!data/rejected
+data/rejected/*
+!data/rejected/.keep
+!data/invoicing
+data/invoicing/*
+!data/invoicing/.keep
+!data/invoicing/pay
+data/invoicing/pay/*
+!data/invoicing/pay/.keep
+!data/invoicing/pay/processed
+data/invoicing/pay/processed/*
+!data/invoicing/pay/processed/.keep
 
 vendor
 .bundle

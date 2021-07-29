@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem 'date'
 gem 'nokogiri'
-gem 'filewatcher'
 gem 'mail'
+
+gem "thor", "~> 1.1"

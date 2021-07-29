@@ -14,5 +14,5 @@ RUN bundle install --system
 COPY --chown=bfs . .
 
 USER bfs
-WORKDIR /opt/app-root/src/data
-CMD ["/opt/app-root/src/bin/wrapper.sh"]
+ENTRYPOINT ["/opt/app-root/src/bin/bfs"]
+CMD ["help"]
