@@ -27,8 +27,9 @@ module BFS
 
   def self.watch!(directory = nil, interval: 120)
     directory ||= DEFAULT_INPUT_DIR
-    raise ArgumentError, "first argument should be a directory to watch for new files" \
-      unless File.directory?(directory)
+    raise ArgumentError, "Watch directory '#{directory}' is not a directory or symlink to a directory" \
+      unless File.directory?(directory) || \
+             (File.symlink?(directory) && File.directory?(File.readlink(directory)))
 
     raise ArgumentError, "interval must be a positive integer" \
       unless interval > 0 and interval.to_i == interval
