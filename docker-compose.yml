@@ -4,9 +4,8 @@ services:
     command: watch --interval 10
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: yes
-    network_mode: none
     volumes:
-      - ./:/opt/app-root/src
+      - ./:/opt/app-root/src:rw
       - ./secrets:/run/secrets:ro
 
 version: "3.8"

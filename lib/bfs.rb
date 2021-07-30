@@ -8,6 +8,9 @@ require 'invoice_sections'
 require 'invoice_tools'
 require 'padding'
 require 'validations'
+require_relative 'mailer'
+require_relative 'Logging'
+include Logging
 
 # Loads secrets from /run/secrets/* into ENV
 Docker::Secret.setup_environment!
@@ -34,19 +37,19 @@ module BFS
       unless interval > 0 and interval.to_i == interval
 
     pattern = File.expand_path(File.join(directory, '*.xml'))
-    puts "BFS: Watching #{pattern} for updates"
+    logger.info "BFS: Watching #{pattern} for updates"
 
     while true
       Dir.glob(pattern) do |filepath|
         begin
-          puts "Processing file: #{filepath}"
+          logger.info "Processing file: #{filepath}"
           process!(filepath)
         rescue StandardError => e
-          puts "Error processing #{filepath}: #{e}"
+          logger.info "Error processing #{filepath}: #{e}"
         end
       end
 
-      puts "... pausing #{interval}s before checking for new files"
+      logger.info "... pausing #{interval}s before checking for new files"
       sleep interval
     end
   end
@@ -59,7 +62,7 @@ module BFS
   end
 
   def self.clear!
-    puts "Deleting .xml/.txt files under #{DATA_DIR}"
+    logger.info "Deleting .xml/.txt files under #{DATA_DIR}"
     FileUtils.rm_f(Dir.glob(File.join(DATA_DIR, '**/*.{txt,xml}')))
   end
 
@@ -76,7 +79,7 @@ module BFS
 
     has_valid_invoice = false
 
-    puts "Opening file for processing #{in_file} => #{out_file}"
+    logger.info "Opening file for processing #{in_file} => #{out_file}"
     writer = File.open(out_file, 'w')
 
     doc = Nokogiri::XML(File.open(in_file), Encoding::UTF_8.to_s)
@@ -120,12 +123,12 @@ module BFS
 
       errors = Validations::validate(invoice_data, invoice)
       if errors.any?
-        puts "File has errors: #{errors} (#{in_file})"
+        logger.info "File has errors: #{errors} (#{in_file})"
         write_errorfile(invoice, errors, error_file)
         next
       end
 
-      puts "... file has no errors (#{in_file})"
+      logger.info "... Invoice has no errors (#{invoice_data['invoice_number']})"
       has_valid_invoice = true
 
       invoice_data['sum'] = InvoiceTools::get_invoice_total(invoice_data)
@@ -153,17 +156,25 @@ module BFS
       writer.write(footer)
       writer.close
     else
-      puts "Deleting output file because there are no valid invoices: #{out_file}"
+      logger.info "Deleting output file because there are no valid invoices: #{out_file}"
       writer.close
       File.delete(out_file) if File.exist?(out_file)
     end
 
-    puts "Moving #{in_file} => #{done_file}"
+    logger.info "Moving #{in_file} => #{done_file}"
     FileUtils.mv(in_file, done_file)
+
+    subject = "BFS Invoices file for #{in_file}"
+    body = "Invoices file for #{in_file} as well as error file if any invoices were rejected. If all invoices were rejected there will only be an error file"
+
+    #send email if there are any error or BFS files produced
+    attachments = [out_file,error_file]
+    Mailer.send_message(subject,body,attachments)
+    
   end
 
   def self.write_errorfile(invoice, errors, error_file)
-    puts "Writing errors to #{error_file}"
+    logger.info "Writing errors to #{error_file}"
     File.open(error_file, "a") do |fh|
       fh.write("**********************\n")
       fh.write("\n#{errors.join}\n\n")

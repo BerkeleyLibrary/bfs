@@ -1,8 +1,11 @@
 require 'date'
 require 'nokogiri'
+require_relative 'Logging'
+include Logging
 
 module Validations
   def self.validate(invoice, invoice_xml)
+    logger.info "Validating invoice #{invoice['invoice_number'][0].to_s}"
     errors = []
     errors << required_header_fields(invoice)
     errors << max_size(invoice,'vendor_FinancialSys_Code',10)
@@ -12,9 +15,11 @@ module Validations
     errors << payment_method(invoice)
     errors << invoice_date_valid(invoice['invoice_date'][0])
     return errors.reject { |e| e.to_s.length == 0 }
+    logger.info "Finished validations for invoice #{invoice['invoice_number'][0].to_s}"
   end
 
   def self.multiple_chart_strings(invoice,invoice_xml)
+    logger.info "Checking for multiple chart strings for #{invoice['invoice_number'][0].to_s}"
     errors = ""
     count = 0
     invoice_xml.xpath("//invoice_line").each do |line|
@@ -55,6 +60,7 @@ module Validations
   end
 
   def self.payment_method(invoice)
+    logger.info "validating payment method #{invoice['invoice_number'][0].to_s}"
     errors = ""
     unless invoice['payment_method'][0].to_s.match(/ACCOUNTINGDEPARTMENT/i)
       errors << "Payment method is incorrect. payment_method is required and can only be ACCOUNTINGDEPARTMENT\n"
@@ -77,6 +83,7 @@ module Validations
 
   #make sure certain fields don't exceed maximum size
   def self.max_size(invoice_data,field,size)
+    logger.info "Validating max size for field #{field} for #{invoice_data['invoice_number'][0].to_s}"
     errors = ""
     invoice_data[field].each do |value|
       if value && value.size > size
@@ -102,6 +109,7 @@ module Validations
   end
 
   def self.external_id_format(invoice)
+    logger.info "Validating external id format for #{invoice['invoice_number'][0].to_s}" 
     errors = ""
     count = 0
     invoice['external_id'].each do |value|
