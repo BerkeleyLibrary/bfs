@@ -1,10 +1,12 @@
 require_relative 'invoice_tools'
 require_relative 'padding'
+require_relative 'Logging'
+include Logging
 
 module InvoiceSections
   #create header string
   def self.process_header(invoice_data)
-
+    logger.info "Going to create header for #{invoice_data['invoice_number'][0].to_s}"
     invoice_price,sign = InvoiceTools::process_sign(invoice_data['sum'][0].to_s)
 
     header = "2L"
@@ -28,16 +30,19 @@ module InvoiceSections
     header << InvoiceTools::repeated(" ",3) #discount days not used
     header << InvoiceTools::repeated(" ",29) #filler
     header << "\n"
-
+    logger.info "Finished with header for #{invoice_data['invoice_number'][0].to_s}"
    # puts header
     return header
     #@writer.write(header)
   end
 
   def self.process_invoice_entry(invoice_data)
+   
     line_item_number = "001"
     item_count = 1
     invoices = ""
+
+    logger.info "Going to create invoice"
 
     count = 0
     #we will supply an invidual line for each gross_amount
@@ -86,6 +91,7 @@ module InvoiceSections
       item_count += 1
       #puts dist
       #@writer.write(dist)
+      logger.info "#{count + 1} line items for invoice for #{invoice_data['invoice_number'][0].to_s}"
       count += 1
     end
 
@@ -93,6 +99,7 @@ module InvoiceSections
   end
 
   def self.process_footer(invoice_count,item_count,grand_total)
+    logger.info "creating footer"
     invoice_grand_total,sign = InvoiceTools::process_sign(grand_total.to_s)
 
     footer = "2L"
@@ -110,7 +117,8 @@ module InvoiceSections
     footer << Padding::get_pad("grand_total",invoice_grand_total) #//total distribution amount (same as total invoice amount).
     footer << sign
     footer << InvoiceTools::repeated(" ",67) #filler
-
+    
+    logger.info "Finished with Footer"
     return footer
   end
 end
