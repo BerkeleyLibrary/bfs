@@ -10,7 +10,7 @@ module BFS
     desc 'watch', 'Monitor a directory for new BFS .xml files to process.'
     method_option :directory, desc: 'The directory to watch for new files', aliases: '-d', default: BFS::DEFAULT_INPUT_DIR
     method_option :interval, desc: 'Seconds to sleep between scanning for new files', aliases: '-i', default: 120, type: :numeric
-    def watch(dir = nil)
+    def watch
       BFS.watch!(options[:directory], interval: options[:interval])
     end
 
