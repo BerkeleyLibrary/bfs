@@ -1,6 +1,6 @@
 module Mailer 
 require 'mail'
-require_relative 'Logging'
+require_relative 'logging'
 include Logging
 
 

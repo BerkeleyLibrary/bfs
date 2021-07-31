@@ -1,6 +1,6 @@
 require 'date'
 require 'nokogiri'
-require_relative 'Logging'
+require_relative 'logging'
 include Logging
 
 module Validations

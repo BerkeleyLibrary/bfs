@@ -9,7 +9,7 @@ require 'invoice_tools'
 require 'padding'
 require 'validations'
 require_relative 'mailer'
-require_relative 'Logging'
+require_relative 'logging'
 include Logging
 
 # Loads secrets from /run/secrets/* into ENV

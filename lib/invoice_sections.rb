@@ -1,6 +1,6 @@
 require_relative 'invoice_tools'
 require_relative 'padding'
-require_relative 'Logging'
+require_relative 'logging'
 include Logging
 
 module InvoiceSections
