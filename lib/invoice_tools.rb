@@ -1,7 +1,8 @@
 module InvoiceTools
   #format date. It needs to be yymmdd
   def self.process_date(invoice_date)
-    formats = ['%m/%d/%Y','%m.%d.%Y','%m-%d-%Y','%Y.%m.%d','%Y-%m-%d','%Y/%m/%d','%Y-%m','%b %d, %Y','%b %Y']
+    #formats = ['%m/%d/%Y','%m.%d.%Y','%m-%d-%Y','%Y.%m.%d','%Y-%m-%d','%Y%m%d','%Y/%m/%d','%Y-%m','%b %d, %Y','%b %Y']
+    formats = ['%m/%d/%Y','%Y%m%d'] 
     formats.each do |format|
       begin
         if Date.strptime(invoice_date,format)

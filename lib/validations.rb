@@ -42,7 +42,11 @@ module Validations
   def self.invoice_date_valid(invoice_date)
     errors = ""
 
-    invoice_date = Date.strptime(invoice_date, "%m/%d/%Y")
+    if invoice_date.match(/\d{,2}\/\d{2}\/\d{4}/)
+      invoice_date = Date.strptime(invoice_date, "%m/%d/%Y")
+    elsif invoice_date.match(/\d{8}/)
+      invoice_date = Date.strptime(invoice_date, "%Y%m%d")
+    end
 
     now_date = Time.now.strftime("%F")
     invoice_date = invoice_date.strftime("%F")
