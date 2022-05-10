@@ -13,9 +13,33 @@ module Validations
     errors << multiple_chart_strings(invoice,invoice_xml)
     errors << external_id_format(invoice)
     errors << payment_method(invoice)
+    errors << currency(invoice, invoice_xml)
     errors << invoice_date_valid(invoice['invoice_date'][0])
     return errors.reject { |e| e.to_s.length == 0 }
     logger.info "Finished validations for invoice #{invoice['invoice_number'][0].to_s}"
+  end
+
+  def self.currency(invoice, invoice_xml)
+    logger.info "Checking that currency is USD for #{invoice['invoice_number'][0].to_s}"
+    errors = '' 
+    count = 0
+
+    invoice_xml.xpath("//invoice_line").each do |line|
+      xml = Nokogiri::XML(line.to_xml)
+      value = ""
+      items = []
+      xml.xpath("//fund_info_list/fund_info/amount/currency").each do |field|
+        value = field.text
+        unless value.match(/^USD$/i)
+          items << value
+        end
+      end
+      
+      errors << "Non USD currency found in invoice. Line number #{invoice['line_number'][count]}\n" unless items.empty?
+      count += 1
+    end
+    
+    return errors
   end
 
   def self.multiple_chart_strings(invoice,invoice_xml)
@@ -86,7 +110,7 @@ module Validations
   end
 
   #make sure certain fields don't exceed maximum size
-  def self.max_size(invoice_data,field,size)
+  def self.max_size(invoice_data,field, size)
     logger.info "Validating max size for field #{field} for #{invoice_data['invoice_number'][0].to_s}"
     errors = ""
     invoice_data[field].each do |value|

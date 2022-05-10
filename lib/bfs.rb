@@ -97,6 +97,7 @@ module BFS
       invoice_data = {}
       #invoice_data['external_id'] = InvoiceTools::get_items(invoice,"/invoice_line/fund_info_list/fund_info/external_id")
       invoice_data['external_id'] = InvoiceTools::get_items(invoice,"//fund_info_list/fund_info/external_id")
+      #invoice_data['currency'] = InvoiceTools::get_items(invoice,"//fund_info_list/fund_info/amount/currency")
       invoice_data['invoice_number'] = InvoiceTools::get_data(invoice,"//invoice_number")
       invoice_data['vendor_FinancialSys_Code'] =  InvoiceTools::get_data(invoice,"//vendor_FinancialSys_Code")  #required
       #invoice_data['gross_amount'] = InvoiceTools::get_data(invoice,"//invoice_amount/sum")
@@ -170,6 +171,7 @@ module BFS
 
     #send email if there are any error or BFS files produced
     attachments = [out_file,error_file]
+    logger.info "Going to send email"
     Mailer.send_message(subject,body,attachments)
     
   end

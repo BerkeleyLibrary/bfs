@@ -2,36 +2,19 @@ module Mailer
 require 'mail'
 require_relative 'logging'
 include Logging
-
-
-def self.get_envs()
-  envs = {}
-
-  ["MAIL_PASSWORD","MAIL_USERNAME","BFS_EMAILS"].each do |env| 
-    if ENV[env]
-      envs[env] = ENV[env]      
-    else 
-      logger.info "Environment variable not set for #{env}, Can't send email"
-      return nil
-    end
-  end
-
-  if ENV["SKIP_EMAIL"]
-    envs["SKIP_EMAIL"] = ENV["SKIP_EMAIL"]
-  end
-
-  return envs 
-end
+require_relative 'envs'
 
 
 def self.send_message(subject,body,attachments=nil)
+  mail_secrets = ["MAIL_PASSWORD","MAIL_USERNAME","BFS_EMAILS"]
+  mail_envs = Envs::get_envs(mail_secrets)
 
-  envs = get_envs
-  if envs.nil? 
+  if mail_envs.nil? 
     logger.info "Going to skip sending email since environment variables are not set, MAIL_USERNAME,MAIL_PASSWORD, and BFS_EMAILS"
     return
   end
-  if envs["SKIP_EMAIL"]
+
+  if ENV["SKIP_EMAILS"]
     logger.info "Going to skip sending email since environment variable SKIP_EMAIL is set"
     return
   end
@@ -42,8 +25,8 @@ def self.send_message(subject,body,attachments=nil)
 
   options = {:address             => "smtp.gmail.com",
             :port                 => 587,
-            :user_name            => envs["MAIL_USERNAME"],
-            :password             => envs["MAIL_PASSWORD"], 
+            :user_name            => mail_envs["MAIL_USERNAME"],
+            :password             => mail_envs["MAIL_PASSWORD"], 
             :authentication       => 'plain',
             :enable_starttls_auto => true,
             :return_response => true
@@ -54,7 +37,7 @@ def self.send_message(subject,body,attachments=nil)
     delivery_method :smtp, options
   end
 
-  envs["BFS_EMAILS"].split(/,/).each do |to_email|
+  mail_envs["BFS_EMAILS"].split(/,/).each do |to_email|
     begin
       Mail.deliver do
         to to_email.gsub(/\n/,'')

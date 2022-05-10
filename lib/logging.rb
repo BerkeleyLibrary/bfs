@@ -3,6 +3,7 @@ require 'logger'
 module Logging
   class << self
     def logger
+      $stdout.sync = true
       @logger ||= Logger.new($stdout)
     end
 
