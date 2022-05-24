@@ -4,8 +4,21 @@ services:
     command: watch --interval 10
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: yes
+    environment:
+      COA_APP_ID: "${COA_APP_ID}"
+      COA_APP_KEY: "${COA_APP_KEY}"
     volumes:
       - ./:/opt/app-root/src:rw
-      - ./secrets:/run/secrets:ro
+      #- ./secrets:/run/secrets:ro
+    secrets:
+      - source: SSH_KEY 
+        target: /home/bfs/.ssh/id_rsa
+        uid: "40061"
+        gid: "40061"
+        mode: "0440"
+
+secrets:
+  SSH_KEY:
+    file: secrets/SSH_KEY
 
 version: "3.8"

@@ -1,6 +1,7 @@
 require 'date'
 require 'nokogiri'
 require_relative 'logging'
+require_relative 'validate_COA'
 include Logging
 
 module Validations
@@ -140,10 +141,22 @@ module Validations
     logger.info "Validating external id format for #{invoice['invoice_number'][0].to_s}" 
     errors = ""
     count = 0
+
     invoice['external_id'].each do |value|
-      unless value.to_s.match(/\d\-\d{5}\-\d{5}\-\d{5}\-\d{2}$/)
-          errors << "Malformed or missing external id (chart string). line number: #{invoice['line_number'][count]} for  #{invoice['invoice_number'][0].to_s}\n"
+      status = ValidateCOA.get_status(value.to_s)
+      
+      unless value.to_s.match(/\w{1,}/)
+        errors << "Missing external id (chart string). line number: #{invoice['line_number'][count]} for invoice: #{invoice['invoice_number'][0].to_s}\n"
+        count += 1
+        next
       end
+
+      unless status.empty?
+        errors << "#{status} for chart string: #{value.to_s}. line number: #{invoice['line_number'][count]} for invoice: #{invoice['invoice_number'][0].to_s}\n"
+      end
+      #unless value.to_s.match(/\d\-\d{5}\-\d{5}\-\d{5}\-\d{2}$/)
+      #    errors << "Malformed or missing external id (chart string). line number: #{invoice['line_number'][count]} for  #{invoice['invoice_number'][0].to_s}\n"
+      #end
       count += 1
     end
     return errors

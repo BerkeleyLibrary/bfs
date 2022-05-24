@@ -23,3 +23,5 @@ vendor
 
 secrets/*
 !secrets/.keep
+
+.env
