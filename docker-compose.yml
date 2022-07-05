@@ -9,13 +9,13 @@ services:
       COA_APP_KEY: "${COA_APP_KEY}"
     volumes:
       - ./:/opt/app-root/src:rw
-      #- ./secrets:/run/secrets:ro
+      - ./secrets:/run/secrets:ro
     secrets:
       - source: SSH_KEY 
-        target: /home/bfs/.ssh/id_rsa
+        target: /opt/app/src/.ssh/id_rsa
         uid: "40061"
         gid: "40061"
-        mode: "0440"
+        mode: 0400
 
 secrets:
   SSH_KEY:

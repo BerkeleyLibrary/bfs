@@ -18,6 +18,8 @@ data/invoicing/pay/*
 data/invoicing/pay/processed/*
 !data/invoicing/pay/processed/.keep
 
+ssh_tests
+
 vendor
 .bundle
 

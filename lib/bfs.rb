@@ -8,6 +8,7 @@ require 'invoice_sections'
 require 'invoice_tools'
 require 'padding'
 require 'validations'
+require_relative 'sftp_bfs'
 require_relative 'mailer'
 require_relative 'logging'
 include Logging
@@ -67,10 +68,19 @@ module BFS
     FileUtils.rm_f(Dir.glob(File.join(DATA_DIR, '**/*.{txt,xml}')))
   end
 
+  def self.get_outfile(in_file)
+    out_file = File.basename(in_file).gsub('.xml','.txt')
+    if out_file.size > 35
+      out_file.gsub!(/^\d(.*?)-/,'')
+    end
+    out_file = File.join(OUTPUT_DIR, File.basename(out_file).gsub('.xml', '.txt'))
+  end
+
   # Process an individual file
   def self.process!(in_file)
     # Path to the reformatted output file that will be created
-    out_file = File.join(OUTPUT_DIR, File.basename(in_file).gsub('.xml', '.txt'))
+   # out_file = File.join(OUTPUT_DIR, File.basename(in_file).gsub('.xml', '.txt'))
+    out_file = get_outfile(in_file)
 
     # Path to which the original file is moved post-processing
     done_file = File.join(ORIGINALS_DIR, File.basename(in_file))
@@ -173,7 +183,9 @@ module BFS
     attachments = [out_file,error_file]
     logger.info "Going to send email"
     Mailer.send_message(subject,body,attachments)
-    
+    logger.info "Going to sftp #{out_file} if there is one"
+    SftpBfs.sftp_file(out_file) if File.exist?(out_file) && !ENV['SKIP_SFTP']
+
   end
 
   def self.write_errorfile(invoice, errors, error_file)
