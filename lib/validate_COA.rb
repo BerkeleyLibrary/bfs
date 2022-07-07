@@ -3,7 +3,7 @@ require 'httparty'
 require 'nokogiri'
 
 def self.get_response(chart_string)
-  HTTParty.post('https://apis-qa.berkeley.edu/coa',query: {'COA' => chart_string},
+  HTTParty.post('https://apis.berkeley.edu/coa',query: {'COA' => chart_string},
     headers: {'app_id' => ENV['COA_APP_ID'] ,'app_key' => ENV['COA_APP_KEY'], 'content-type' => 'application/xml'}
   )
 end
