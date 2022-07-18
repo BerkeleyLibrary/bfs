@@ -51,7 +51,6 @@ module BFS
         end
       end
 
-      logger.info "... pausing #{interval}s before checking for new files"
       sleep interval
     end
   end
