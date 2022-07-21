@@ -8,6 +8,7 @@ gem 'nokogiri'
 gem 'mail'
 gem 'net-ssh'
 gem 'net-sftp'
+gem 'rspec'
 
 
 gem "thor", "~> 1.1"
