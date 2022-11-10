@@ -6,9 +6,7 @@ USER_AGENT = 'validate_coa https://git.lib.berkeley.edu/lap/BFS'
 
 def self.get_response(chart_string)
   #HTTParty.post('https://apis.berkeley.edu/coa',query: {'COA' => chart_string},
-  HTTParty.post('https://gateway.api.berkeley.edu/coa',query: {'COA' => chart_string},
-    headers: {'User_Agent' => USER_AGENT, 'Accept' => 'application/xml', 'app_id' => ENV['COA_APP_ID'] ,'app_key' => ENV['COA_APP_KEY'], 'content-type' => 'application/xml'}
-  )
+  HTTParty.post('https://gateway.api.berkeley.edu/coa',query: {'COA' => chart_string}, headers: {'User_Agent' => USER_AGENT, 'Accept' => 'application/xml', 'app_id' => ENV['COA_APP_ID'] ,'app_key' => ENV['COA_APP_KEY']})
 end
 
 def self.get_status(chart_string)
