@@ -2,6 +2,8 @@ module ValidateCOA
 require 'httparty'
 require 'nokogiri'
 
+USER_AGENT = 'validate_coa https://git.lib.berkeley.edu/lap/BFS'
+
 def self.get_response(chart_string)
   #HTTParty.post('https://apis.berkeley.edu/coa',query: {'COA' => chart_string},
   HTTParty.post('https://gateway.api.berkeley.edu/coa',query: {'COA' => chart_string},
@@ -15,6 +17,5 @@ def self.get_status(chart_string)
   xml.xpath("//ValidateCOAResponse/UC_COA_CHK/COA/StatusText1").text
 end
 
-USER_AGENT = 'validate_coa https://git.lib.berkeley.edu/lap/BFS'
 
 end
