@@ -1,9 +1,9 @@
 # From rubygems
+require 'berkeley_library/docker'
 require 'date'
 require 'fileutils'
 require 'nokogiri'
 # Specific to bfs
-require 'docker'
 require 'invoice_sections'
 require 'invoice_tools'
 require 'padding'
@@ -14,7 +14,7 @@ require_relative 'logging'
 include Logging
 
 # Loads secrets from /run/secrets/* into ENV
-Docker::Secret.setup_environment!
+BerkeleyLibrary::Docker::Secret.load_secrets!
 
 module BFS
   DATA_DIR = File.expand_path(File.join(__dir__, '../data'))
