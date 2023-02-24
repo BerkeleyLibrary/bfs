@@ -9,7 +9,7 @@ RUN groupadd -g 40054 alma && \
     usermod -u 40061 -g bfs -G alma -l bfs default && \
     find / -user 1001 -exec chown -h bfs {} \; || true
 
-COPY --chown=bfs Gemfile* ./
+COPY --chown=bfs Gemfile* .ruby-version ./
 RUN bundle install --system
 COPY --chown=bfs . .
 
