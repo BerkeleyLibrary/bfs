@@ -155,10 +155,6 @@ module Validations
         errors << "#{status} for chart string: #{value.to_s}. line number: #{invoice['line_number'][count]} for invoice: #{invoice['invoice_number'][0].to_s}\n"
       end
 
-      unless value.to_s.match(/\d\-\d{5}\-\d{5}\-\d{5}\-\d{2}$/)
-          errors << "Malformed or missing external id (chart string). line number: #{invoice['line_number'][count]} for  #{invoice['invoice_number'][0].to_s}\n"
-      end
-
       count += 1
     end
     return errors
