@@ -3,27 +3,36 @@ GEM
   specs:
     bcrypt_pbkdf (1.1.0)
     berkeley_library-docker (0.1.1)
-    date (3.1.1)
+    date (3.3.3)
     diff-lcs (1.5.0)
     ed25519 (1.3.0)
-    httparty (0.20.0)
-      mime-types (~> 3.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
-    mail (2.7.1)
+    mail (2.8.1)
       mini_mime (>= 0.1.1)
-    mime-types (3.4.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2022.0105)
-    mini_mime (1.1.0)
-    mini_portile2 (2.5.3)
+      net-imap
+      net-pop
+      net-smtp
+    mini_mime (1.1.2)
+    mini_portile2 (2.8.2)
     multi_xml (0.6.0)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (7.0.1)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    net-imap (0.3.6)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.1)
+      timeout
+    net-sftp (4.0.0)
+      net-ssh (>= 5.0.0, < 8.0.0)
+    net-smtp (0.3.3)
+      net-protocol
+    net-ssh (7.1.0)
+    nokogiri (1.15.3)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    racc (1.5.2)
+    racc (1.7.1)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -38,25 +47,26 @@ GEM
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
     thor (1.1.0)
+    timeout (0.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt_pbkdf
+  bcrypt_pbkdf (~> 1.1.0)
   berkeley_library-docker (~> 0.1.1)
-  date
-  ed25519
-  httparty
-  mail
-  net-sftp
-  net-ssh
-  nokogiri
+  date (~> 3.3.3)
+  ed25519 (~> 1.3.0)
+  httparty (~> 0.21.0)
+  mail (~> 2.8.1)
+  net-sftp (~> 4.0.0)
+  net-ssh (~> 7.1.0)
+  nokogiri (~> 1.15.0)
   rspec
   thor (~> 1.1)
 
 RUBY VERSION
-   ruby 2.7.6p219
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.1.4

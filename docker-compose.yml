@@ -3,7 +3,7 @@ services:
     build: .
     command: watch --interval 10
     image: containers.lib.berkeley.edu/lap/bfs/development:latest
-    init: yes
+    init: true 
     environment:
       COA_APP_ID: "${COA_APP_ID}"
       COA_APP_KEY: "${COA_APP_KEY}"
