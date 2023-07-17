@@ -109,6 +109,14 @@ pad_settings:
     pad: 2 
     separator: " "
     adjust: "rjust"
+  cf1:
+    pad: 6 
+    separator: " "
+    adjust: "rjust"
+  cf2:
+    pad: 5 
+    separator: " "
+    adjust: "rjust"
   payment_method:
     pad: 20 
     separator: " "

@@ -77,12 +77,10 @@ module InvoiceSections
       dist << invoice_data['org'][count].to_s
       dist << InvoiceTools::repeated(" ",5) #filler
       dist << invoice_data['program'][count].to_s
-      dist << InvoiceTools::repeated(" ",3) #filler
-      dist << " " #subprogram (not sure what this would be). seems to always be blank
-      dist << InvoiceTools::repeated(" ",4) #filler
-      dist << InvoiceTools::repeated(" ",5) #project, innopac doesn't support project yet
-      dist << InvoiceTools::repeated(" ",10) #filler
-      dist << InvoiceTools::repeated(" ",5) #flex, innopac doesn't support flex yet
+      dist << InvoiceTools::repeated(" ",8) #filler
+      dist << invoice_data['cf1'][count].to_s
+      dist << InvoiceTools::repeated(" ",9) #filler
+      dist << invoice_data['cf2'][count].to_s
       dist << InvoiceTools::repeated(" ",11) #flex, innopac doesn't support flex yet
 
       dist << "\n"

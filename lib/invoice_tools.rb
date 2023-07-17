@@ -57,19 +57,46 @@ module InvoiceTools
   end
 
   def self.parse_external(invoice_data)
+    errors = []
     business_units = []
     accounts = []
     funds = []
     orgs = []
     programs = []
+    cf1 = []
+    cf2 = []
 
     invoice_data['external_id'].each do |value|
-      value.to_s.match(/(\d)-(\d+)-(\d+)-(\d+)-(\d+)/)
-      business_units <<  $1
-      accounts << $2
-      funds << $3
-      orgs << $4
-      programs << $5
+      if value.to_s.match(/(\w)-(\w+)-(\w+)-(\w+)-(\w{2})$/)
+        business_units <<  $1
+        accounts << $2
+        funds << $3
+        orgs << $4
+        programs << $5
+        cf1 << '      '
+        cf2 << '     '      
+      elsif value.to_s.match(/(\w)-(\w+)-(\w+)-(\w+)-(\w{2})-(\w{6})$/)
+        business_units <<  $1
+        accounts << $2
+        funds << $3
+        orgs << $4
+        programs << $5
+        cf1 << $6
+        cf2 << '     ' 
+      elsif value.to_s.match(/(\w)-(\w+)-(\w+)-(\w+)-(\w{2})-(\w{,6})-(\w{5})$/)
+        chartField1 = $6
+        chartField1 = '      ' if chartField1.nil? 
+        business_units <<  $1
+        accounts << $2
+        funds << $3
+        orgs << $4
+        programs << $5
+        cf1 << chartField1 
+        cf2 << $7 
+      else
+        errors << "Could not get chart field sections for external_id: #{value}"
+      end
+
     end
 
     invoice_data['business_unit'] = business_units
@@ -77,7 +104,10 @@ module InvoiceTools
     invoice_data['fund'] = funds
     invoice_data['org'] = orgs
     invoice_data['program'] = programs
-
+    invoice_data['cf1'] = cf1
+    invoice_data['cf2'] = cf2
+   
+    errors 
   end
 
   #Pad fields to match BFS field specs

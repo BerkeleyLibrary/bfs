@@ -128,7 +128,12 @@ module BFS
 
       #external id will be parsed and put into invoice_data hash for business unit, account, fund, org and program
       #invoice_data['external_id'] = InvoiceTools::get_data(invoice,"//fund_info_list/fund_info/external_id") #required, will be broken down into multiple fields
-      InvoiceTools::parse_external(invoice_data)
+      errors = InvoiceTools::parse_external(invoice_data)
+      if errors.any?
+        logger.info "File has errors: #{errors} (#{in_file})"
+        write_errorfile(invoice, errors, error_file)
+        next
+      end
 
       InvoiceTools::get_remit_to(invoice_data)
 
