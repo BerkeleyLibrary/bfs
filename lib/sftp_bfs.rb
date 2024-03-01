@@ -11,7 +11,7 @@ def self.sftp_bfs()
   logger.info "trying to connect to BFS SFTP server"
   begin
     sftp = Net::SFTP.start(
-      'ucmft.berkeley.edu',
+      'ucopmft-in.ucop.edu',
       'cUCB100_library',
       { append_all_supported_algorithms: true }
     )
