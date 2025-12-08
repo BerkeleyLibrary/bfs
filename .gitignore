@@ -20,6 +20,9 @@ data/invoicing/pay/processed/*
 
 ssh_tests
 
+# Build/test artifacts
+artifacts/*
+
 vendor
 .bundle
 

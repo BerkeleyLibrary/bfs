@@ -12,7 +12,7 @@ def self.sftp_bfs()
   begin
     sftp = Net::SFTP.start(
       'ucopmft-in.ucop.edu',
-      'cUCB100_library',
+      ENV['BFS_SFTP_USER'], 
       { append_all_supported_algorithms: true }
     )
 
