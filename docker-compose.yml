@@ -2,7 +2,7 @@ services:
   bfs:
     build: .
     command: watch --interval 10
-    image: containers.lib.berkeley.edu/lap/bfs/development:latest
+#    image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: true 
     environment:
       COA_APP_ID: "${COA_APP_ID}"
@@ -20,5 +20,3 @@ services:
 secrets:
   SSH_KEY:
     file: secrets/SSH_KEY
-
-version: "3.8"

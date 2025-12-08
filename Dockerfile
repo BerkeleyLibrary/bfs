@@ -1,5 +1,4 @@
 FROM registry.access.redhat.com/ubi8/ruby-31
-
 USER root
 
 # Configure users and groups
@@ -10,7 +9,9 @@ RUN groupadd -g 40054 alma && \
     find / -user 1001 -exec chown -h bfs {} \; || true
 
 COPY --chown=bfs Gemfile* .ruby-version ./
-RUN bundle install --system
+RUN bundle config set force_ruby_platform true
+RUN bundle config set system 'true'
+RUN bundle install
 COPY --chown=bfs . .
 
 USER bfs
