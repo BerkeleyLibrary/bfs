@@ -1,18 +1,18 @@
 services:
-  bfs:
+  app:
     build: .
     command: watch --interval 10
-    image: containers.lib.berkeley.edu/lap/bfs/development:latest
     init: true 
     environment:
       COA_APP_ID: "${COA_APP_ID}"
       COA_APP_KEY: "${COA_APP_KEY}"
+      BFS_SFTP_USER: "${BFS_SFTP_USER}"
     volumes:
-      - ./:/opt/app-root/src:rw
+      - ./:/opt/app:rw
       - ./secrets:/run/secrets:ro
     secrets:
       - source: SSH_KEY 
-        target: /opt/app/src/.ssh/id_rsa
+        target: /opt/app/.ssh/id_rsa
         uid: "40061"
         gid: "40061"
         mode: 0400
@@ -20,5 +20,3 @@ services:
 secrets:
   SSH_KEY:
     file: secrets/SSH_KEY
-
-version: "3.8"

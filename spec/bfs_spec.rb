@@ -30,9 +30,4 @@ describe BFS do
     expect(Pathname.new(bfs_file)).to_not exist
   end
 
-#  it 'refreshes fixture data from incoming' do
-#    GOBI.refresh!
-#    expect(Pathname.new(incoming_file)).to exist
-#  end
-
 end
