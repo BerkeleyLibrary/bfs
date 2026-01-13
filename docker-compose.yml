@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      target: development 
     command: watch --interval 10
     init: true 
     environment:

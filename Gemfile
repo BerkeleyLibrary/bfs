@@ -13,5 +13,3 @@ gem 'net-ssh', '~> 7.1.0'
 gem 'nokogiri', '~> 1.15.0'
 gem 'rspec'
 gem 'thor', '~> 1.1'
-
-
