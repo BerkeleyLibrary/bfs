@@ -13,13 +13,13 @@ docker compose build
 View the CLI tool help/description:
 
 ```sh
-docker compose run --rm bfs help
+docker compose run --rm app help
 ```
 
 Adds test data to the default watch directory:
 
 ```sh
-docker compose run --rm bfs seed
+docker compose run --rm app seed
 ```
 
 Run the app in the background. It will continue running, monitoring for .xml files to process every 10s.
@@ -32,19 +32,19 @@ docker compose logs -f # view processing logs in real time
 Watch a non-standard directory:
 
 ```sh
-docker compose run --rm bfs watch /path/in/container # absolute path
-docker compose run --rm bfs watch data/somedir # path relative to /opt/app-root/src
+docker compose run --rm app watch /path/in/container # absolute path
+docker compose run --rm app watch data/somedir # path relative to /opt/app
 ```
 
 Process a specific file:
 
 ```sh
-docker compose run --rm bfs process /abs/path/to/myfile.xml # absolute path
-docker compose run --rm bfs process data/invoicing/pay/somefile.xml # relative path
+docker compose run --rm app process /abs/path/to/myfile.xml # absolute path
+docker compose run --rm app process data/invoicing/pay/somefile.xml # relative path
 ```
 
 Delete previously processed files and error logs:
 
 ```sh
-docker compose run --rm bfs clear
+docker compose run --rm app clear
 ```
