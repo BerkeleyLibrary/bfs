@@ -42,7 +42,13 @@ RUN bundle config set force_ruby_platform true
 RUN bundle config set system 'true'
 RUN bundle install
 
-# COPY --chown=bfs:bfs . .
+# =================================
+# Target: production
+# =================================
+FROM base AS production
+
+# Copy the built codebase from the dev stage
+COPY --from=development --chown=bfs /usr/local/bundle /usr/local/bundle
 
 # =================================
 # Target: production
@@ -50,8 +56,9 @@ RUN bundle install
 FROM base AS production
 
 # Copy the built codebase from the dev stage
-# COPY --from=development --chown=bfs /opt/app /opt/app
 COPY --from=development --chown=bfs /usr/local/bundle /usr/local/bundle
+
+USER bfs
 
 WORKDIR /opt/app
 RUN bundle config set frozen 'true'
