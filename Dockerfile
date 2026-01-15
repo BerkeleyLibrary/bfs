@@ -1,58 +1,58 @@
 FROM ruby:3.3-slim AS base
-USER root
 
 # Configure users and groups
 RUN groupadd -g 40054 alma && \
-    useradd -r -s /sbin/nologin -M -u 40054 -g alma alma && \
-    useradd -u 40061 bfs && \
+    useradd -s /sbin/nologin -M -u 40054 -g alma alma && \
     groupadd -g 40061 bfs && \
-    usermod -u 40061 -g bfs -G alma -l bfs default && \
-    find / -user 1001 -exec chown -h bfs {} \; || true && \
-    mkdir -p /opt/app && \
-    chown -R bfs:bfs /opt/app
+    useradd -u 40061 -g bfs -G alma -m bfs && \
+    install -d -o bfs -g bfs -m 0700 /opt/app /home/bfs/.ssh
 
-# Get list of available packages
-RUN apt-get -y update -qq
+# Install packages common to dev/prod
+RUN apt-get -y update -qq && \
+    gem install bundler --version 2.5.22
 
-COPY --chown=bfs . /opt/app
+# Ignore the system's platform and only install native Ruby versions
+ENV BUNDLE_FORCE_RUBY_PLATFORM=true
+# Prevent automatic updates to the Gemfile.lock
+ENV BUNDLE_FROZEN=true
+# Install Gems to the container's system-wide location
+ENV BUNDLE_SYSTEM=true
+# Prepend BFS script to PATH so you don't have to prefix with /opt/app/bin.
+ENV PATH=/opt/app/bin:$PATH
 
+WORKDIR /opt/app
 ENTRYPOINT ["/opt/app/bin/bfs"]
 CMD ["help"]
 
 # ===============================================
 # Target: development
 # ===============================================
-
 FROM base AS development
 
-USER root
- 
 RUN apt-get -y --no-install-recommends install \
-    build-essential \
-    make
+        build-essential \
+        make
 
-USER bfs
-
-# Base image ships with an older version of bundler
-RUN gem install bundler --version 2.5.22
-
-WORKDIR /opt/app
+# Install rubygems. This step is separated from copying the
+# rest of the codebase to maximize cache hits.
 COPY --chown=bfs Gemfile* .ruby-version ./
-RUN bundle config set force_ruby_platform true
-RUN bundle config set system 'true'
 RUN bundle install
 
-# COPY --chown=bfs:bfs . .
+# Install the rest of the codebase.
+COPY --chown=bfs:bfs . .
 
 # =================================
 # Target: production
 # =================================
 FROM base AS production
 
-# Copy the built codebase from the dev stage
-# COPY --from=development --chown=bfs /opt/app /opt/app
-COPY --from=development --chown=bfs /usr/local/bundle /usr/local/bundle
+# Copy the built codebase/dependencies from the dev stage
+COPY --from=development --chown=bfs:bfs /opt/app /opt/app
+COPY --from=development --chown=bfs:bfs /usr/local/bundle /usr/local/bundle
 
-WORKDIR /opt/app
-RUN bundle config set frozen 'true'
-RUN bundle install --local
+# Drop privileges
+USER bfs
+
+# Verify the installation
+RUN bundle check && \
+    bfs help
