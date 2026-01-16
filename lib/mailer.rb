@@ -24,11 +24,11 @@ def self.send_message(subject,body,attachments=nil)
   from_email =  "lib-noreply@berkeley.edu"
 
   options = {:address             => "smtp.gmail.com",
-            :port                 => 587,
+            :port                 => 465,
             :user_name            => mail_envs["MAIL_USERNAME"],
             :password             => mail_envs["MAIL_PASSWORD"], 
             :authentication       => 'plain',
-            :enable_starttls_auto => true,
+            :tls                  => true,
             :return_response => true
   }
 
@@ -48,12 +48,11 @@ def self.send_message(subject,body,attachments=nil)
       	  add_file attachment if File.file?(attachment) 
         end 
       end
+      logger.info "Email sent"
     rescue StandardError => e
-        logger.info "Error sending email: #{e}"
+        logger.error "Error sending email: #{e}"
     end 
   end
-
-  logger.info "Email sent"
  
   #sleeping for 2 seconds so emails don't get flagged for spamming 
   sleep 2
