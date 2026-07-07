@@ -1,4 +1,4 @@
-FROM ruby:3.3-slim AS base
+FROM ruby:3.4-slim AS base
 
 # Configure users and groups
 RUN groupadd -g 40054 alma && \
@@ -9,7 +9,7 @@ RUN groupadd -g 40054 alma && \
 
 # Install packages common to dev/prod
 RUN apt-get -y update -qq && \
-    gem install bundler --version 2.5.22
+    gem install bundler --version 4.0.15
 
 # Ignore the system's platform and only install native Ruby versions
 ENV BUNDLE_FORCE_RUBY_PLATFORM=true
